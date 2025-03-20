@@ -9,30 +9,31 @@
     <title>Argon Dashboard 2 PRO Laravel by Creative Tim & UPDIVISION</title>
 
     @if (config('app.is_demo'))
-        <meta name="keywords"
-            content="creative tim, updivision, html dashboard, laravel, argon, html css dashboard laravel, laravel argon dashboard laravel, laravel argon dashboard laravel pro, laravel argon dashboard, laravel argon dashboard pro, argon admin, laravel dashboard, laravel dashboard pro, laravel admin, web dashboard, bootstrap 5 dashboard laravel, bootstrap 5, css3 dashboard, bootstrap 5 admin laravel, argon dashboard bootstrap 5 laravel, frontend, responsive bootstrap 5 dashboard, argon dashboard, argon laravel bootstrap 5 dashboard" />
-        <meta name="description" content="Premium Admin Dashboard for Laravel with Ready to Use CRUDs" />
-        <meta itemprop="name" content="Argon Dashboard 2 PRO Laravel by Creative Tim & UPDIVISION" />
-        <meta itemprop="description" content="Premium Admin Dashboard for Laravel with Ready to Use CRUDs" />
-        <meta itemprop="image"
-            content="https://s3.amazonaws.com/creativetim_bucket/products/146/original/argon-dashboard-pro-laravel.jpg" />
-        <meta name="twitter:card" content="product" />
-        <meta name="twitter:site" content="@creativetim" />
-        <meta name="twitter:title" content="Argon Dashboard 2 PRO Laravel by Creative Tim & UPDIVISION" />
-        <meta name="twitter:description" content="Premium Admin Dashboard for Laravel with Ready to Use CRUDs" />
-        <meta name="twitter:creator" content="@creativetim" />
-        <meta name="twitter:image"
-            content="https://s3.amazonaws.com/creativetim_bucket/products/146/original/argon-dashboard-pro-laravel.jpg" />
-        <meta property="fb:app_id" content="655968634437471" />
-        <meta property="og:title" content="Argon Dashboard 2 PRO Laravel by Creative Tim & UPDIVISION" />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.creative-tim.com/live/argon-dashboard-pro-laravel" />
-        <meta property="og:image"
-            content="https://s3.amazonaws.com/creativetim_bucket/products/146/original/argon-dashboard-pro-laravel.jpg" />
-        <meta property="og:description" content="Premium Admin Dashboard for Laravel with Ready to Use CRUDs" />
+    <meta name="keywords"
+        content="creative tim, updivision, html dashboard, laravel, argon, html css dashboard laravel, laravel argon dashboard laravel, laravel argon dashboard laravel pro, laravel argon dashboard, laravel argon dashboard pro, argon admin, laravel dashboard, laravel dashboard pro, laravel admin, web dashboard, bootstrap 5 dashboard laravel, bootstrap 5, css3 dashboard, bootstrap 5 admin laravel, argon dashboard bootstrap 5 laravel, frontend, responsive bootstrap 5 dashboard, argon dashboard, argon laravel bootstrap 5 dashboard" />
+    <meta name="description" content="Premium Admin Dashboard for Laravel with Ready to Use CRUDs" />
+    <meta itemprop="name" content="Argon Dashboard 2 PRO Laravel by Creative Tim & UPDIVISION" />
+    <meta itemprop="description" content="Premium Admin Dashboard for Laravel with Ready to Use CRUDs" />
+    <meta itemprop="image"
+        content="https://s3.amazonaws.com/creativetim_bucket/products/146/original/argon-dashboard-pro-laravel.jpg" />
+    <meta name="twitter:card" content="product" />
+    <meta name="twitter:site" content="@creativetim" />
+    <meta name="twitter:title" content="Argon Dashboard 2 PRO Laravel by Creative Tim & UPDIVISION" />
+    <meta name="twitter:description" content="Premium Admin Dashboard for Laravel with Ready to Use CRUDs" />
+    <meta name="twitter:creator" content="@creativetim" />
+    <meta name="twitter:image"
+        content="https://s3.amazonaws.com/creativetim_bucket/products/146/original/argon-dashboard-pro-laravel.jpg" />
+    <meta property="fb:app_id" content="655968634437471" />
+    <meta property="og:title" content="Argon Dashboard 2 PRO Laravel by Creative Tim & UPDIVISION" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.creative-tim.com/live/argon-dashboard-pro-laravel" />
+    <meta property="og:image"
+        content="https://s3.amazonaws.com/creativetim_bucket/products/146/original/argon-dashboard-pro-laravel.jpg" />
+    <meta property="og:description" content="Premium Admin Dashboard for Laravel with Ready to Use CRUDs" />
     @endif
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
     <!-- Nucleo Icons -->
     <link href="/assets/css/nucleo-icons.css" rel="stylesheet" />
     <link href="/assets/css/nucleo-svg.css" rel="stylesheet" />
@@ -51,37 +52,37 @@
 
 <body class="g-sidenav-show bg-gray-100 {{ $class ?? '' }}">
     @guest
-        @yield('content')
+    @yield('content')
     @endguest
 
     @auth
-        @if (str_contains(request()->url(), 'rtl') ||
-            str_contains(request()->url(), 'pricing-page') ||
-            in_array(
-                request()->route()->getName(),
-                ['signins', 'signups', 'resets', 'locks', 'verifications', 'errors']))
-            @yield('content')
-        @else
-            @if (str_contains(request()->url(), 'landing'))
-                @include('components.headers.hero', ['height' => 'h-100'])
-                @include('layouts.navbars.auth.sidenav', [
-                    'box' => 'box-shadow-none',
-                    'logo' => '/assets/img/logo-ct.png',
-                ])
-            @elseif (!str_contains(request()->url(), 'vr'))
-                @if (Route::currentRouteName() == 'profiles' || str_contains(request()->url(), 'new-product'))
-                    @include('components.headers.image-hero')
-                @else
-                    @include('components.headers.hero')
-                @endif
-                @include('layouts.navbars.auth.sidenav', ['bg' => 'bg-white'])
-            @endif
+    @if (str_contains(request()->url(), 'rtl') ||
+    str_contains(request()->url(), 'pricing-page') ||
+    in_array(
+    request()->route()->getName(),
+    ['signins', 'signups', 'resets', 'locks', 'verifications', 'errors']))
+    @yield('content')
+    @else
+    @if (str_contains(request()->url(), 'landing'))
+    @include('components.headers.hero', ['height' => 'h-100'])
+    @include('layouts.navbars.auth.sidenav', [
+    'box' => 'box-shadow-none',
+    'logo' => '/assets/img/logo-ct.png',
+    ])
+    @elseif (!str_contains(request()->url(), 'vr'))
+    @if (Route::currentRouteName() == 'profiles' || str_contains(request()->url(), 'new-product'))
+    @include('components.headers.image-hero')
+    @else
+    @include('components.headers.hero')
+    @endif
+    @include('layouts.navbars.auth.sidenav', ['bg' => 'bg-white'])
+    @endif
 
-            <main class="main-content position-relative border-radius-lg">
-                @yield('content')
-                @include('components.fixed-plugin')
-            </main>
-        @endif
+    <main class="main-content position-relative border-radius-lg">
+        @yield('content')
+        @include('components.fixed-plugin')
+    </main>
+    @endif
     @endauth
 
     <!--   Core JS Files   -->

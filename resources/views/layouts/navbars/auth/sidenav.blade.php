@@ -14,6 +14,45 @@
     <div class="collapse navbar-collapse  w-auto h-auto" id="sidenav-collapse-main">
         <ul class="navbar-nav">
             <li class="nav-item">
+                <a data-bs-toggle="collapse" href="#partnerCollapse" class="nav-link {{ in_array(request()->route('page'), ['partner', 'add', 'update']) ? 'active' : '' }}"
+                    aria-controls="partnerCollapse" role="button" aria-expanded="{{ in_array(request()->route('page'), ['partner', 'add', 'update']) ? 'true' : 'false' }}">
+                    <div class="icon icon-shape icon-sm text-center d-flex align-items-center justify-content-center">
+                        <i class="ni ni-briefcase-24 text-primary text-sm opacity-10"></i>
+                    </div>
+                    <span class="nav-link-text ms-1">Partner</span>
+                </a>
+                <div class="collapse {{ in_array(request()->route('page'), ['partner', 'add', 'update']) ? 'show' : '' }}" id="partnerCollapse">
+                    <ul class="nav ms-4">
+                        <!-- View Partner -->
+                        <li class="nav-item">
+                            <a class="nav-link {{ request()->routeIs('partners') && request()->route('page') === 'partner' ? 'active' : '' }}"
+                                href="{{ route('partners', ['page' => 'partner']) }}">
+                                <span class="sidenav-mini-icon"> P </span>
+                                <span class="sidenav-normal"> View Partner </span>
+                            </a>
+                        </li>
+
+                        <!-- Add Partner -->
+                        <li class="nav-item">
+                            <a class="nav-link {{ request()->routeIs('partners') && request()->route('page') === 'add' ? 'active' : '' }}"
+                                href="{{ route('partners', ['page' => 'add']) }}">
+                                <span class="sidenav-mini-icon"> A </span>
+                                <span class="sidenav-normal"> Add Partner </span>
+                            </a>
+                        </li>
+
+                        <!-- Update Partner -->
+                        <li class="nav-item">
+                            <a class="nav-link {{ request()->routeIs('partners') && request()->route('page') === 'update' ? 'active' : '' }}"
+                                href="{{ route('partners', ['page' => 'update']) }}">
+                                <span class="sidenav-mini-icon"> U </span>
+                                <span class="sidenav-normal"> Update Partner </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item">
                 <a data-bs-toggle="collapse" href="#dashboardsExamples" class="nav-link {{ Route::currentRouteName() == 'dashboards' ? 'active' : '' }}"
                     aria-controls="dashboardsExamples" role="button" aria-expanded="false">
                     <div class="icon icon-shape icon-sm text-center d-flex align-items-center justify-content-center">
@@ -97,32 +136,32 @@
                             </a>
                         </li>
                         @can('manage-users', auth()->user())
-                            <li class="nav-item ">
-                                <a class="nav-link {{ Route::currentRouteName() == 'user-management' ? 'active' : '' }}" href="{{ route('user-management') }}">
-                                    <span class="sidenav-mini-icon"> U </span>
-                                    <span class="sidenav-normal"> User Management </span>
-                                </a>
-                            </li>
-                            <li class="nav-item ">
-                                <a class="nav-link {{ Route::currentRouteName() == 'role-management' ? 'active' : '' }}" href="{{ route('role-management') }}">
-                                    <span class="sidenav-mini-icon"> R </span>
-                                    <span class="sidenav-normal"> Role Management </span>
-                                </a>
-                            </li>
+                        <li class="nav-item ">
+                            <a class="nav-link {{ Route::currentRouteName() == 'user-management' ? 'active' : '' }}" href="{{ route('user-management') }}">
+                                <span class="sidenav-mini-icon"> U </span>
+                                <span class="sidenav-normal"> User Management </span>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link {{ Route::currentRouteName() == 'role-management' ? 'active' : '' }}" href="{{ route('role-management') }}">
+                                <span class="sidenav-mini-icon"> R </span>
+                                <span class="sidenav-normal"> Role Management </span>
+                            </a>
+                        </li>
                         @endcan
                         @can('manage-items', auth()->user())
-                            <li class="nav-item ">
-                                <a class="nav-link {{ Route::currentRouteName() == 'category-management' ? 'active' : '' }}" href="{{ route('category-management') }}">
-                                    <span class="sidenav-mini-icon"> C </span>
-                                    <span class="sidenav-normal"> Category Management </span>
-                                </a>
-                            </li>
-                            <li class="nav-item ">
-                                <a class="nav-link {{ Route::currentRouteName() == 'tag-management' ? 'active' : '' }}" href="{{ route('tag-management') }}">
-                                    <span class="sidenav-mini-icon"> T </span>
-                                    <span class="sidenav-normal"> Tag Management </span>
-                                </a>
-                            </li>
+                        <li class="nav-item ">
+                            <a class="nav-link {{ Route::currentRouteName() == 'category-management' ? 'active' : '' }}" href="{{ route('category-management') }}">
+                                <span class="sidenav-mini-icon"> C </span>
+                                <span class="sidenav-normal"> Category Management </span>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link {{ Route::currentRouteName() == 'tag-management' ? 'active' : '' }}" href="{{ route('tag-management') }}">
+                                <span class="sidenav-mini-icon"> T </span>
+                                <span class="sidenav-normal"> Tag Management </span>
+                            </a>
+                        </li>
                         @endcan
                         <li class="nav-item ">
                             <a class="nav-link {{ Route::currentRouteName() == 'item-management' ? 'active' : '' }}" href="{{ route('item-management') }}">

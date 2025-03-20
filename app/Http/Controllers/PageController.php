@@ -6,6 +6,19 @@ use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
+
+
+
+    //partner route
+
+    public function partners(string $page)
+    {
+        if (view()->exists("pt.partner.{$page}")) {
+            return view("pt.partner.{$page}");
+        }
+
+        return abort(404);
+    }
     public function dashboards(string $page)
     {
         if (view()->exists("dashboards.{$page}")) {
@@ -149,4 +162,6 @@ class PageController extends Controller
 
         return abort(404);
     }
+
+
 }

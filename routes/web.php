@@ -92,6 +92,11 @@ Route::group(['middleware' => 'auth'], function () {
         Route::post('/item-delete/{id}', 'destroy')->name('item-destroy');
     });
 
+
+
+    //new routes
+    Route::get('/pt/partner/{page}', [PageController::class, 'partners'])->name('partners');
+
     Route::get('/{page}', [PageController::class, 'dashboards'])->name('dashboards');
 
     Route::get('/pages/profile/{page}', [PageController::class, 'profiles'])->name('profiles');
@@ -125,4 +130,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/authentication/errors/{page}', [PageController::class, 'errors'])->name('errors');
 
     Route::post('logout', [LoginController::class, 'logout'])->name('logout');
+
+
 });
