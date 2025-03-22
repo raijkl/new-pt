@@ -86,7 +86,8 @@
                 <div class="row">
                     <div class="col-12 col-lg-10 m-auto">
                         <form class="multisteps-form__form mb-8">
-                            <!--single form panel-->
+
+                            <!--Basic Info-->
                             <div class="card multisteps-form__panel p-3 border-radius-xl bg-white js-active" data-animation="FadeIn">
                                 <h5 class="font-weight-bolder mb-0">Login Information</h5>
                                 <div class="multisteps-form__content">
@@ -325,7 +326,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <!--single form panel-->
+                            <!--Bank Info-->
                             <div class="card multisteps-form__panel p-3 border-radius-xl bg-white" data-animation="FadeIn">
                                 <!-- Radio Buttons for Selection -->
                                 <div class="row mt-3">
@@ -409,6 +410,8 @@
                                                     <label class="form-check-label mb-0" for="hsbcDesignatedCheckbox">HSBC Designated</label>
                                                 </div>
                                             </div>
+
+
 
                                             <!-- Intermediate Bank Name (Dynamic) -->
                                             <div id="hsbcDesignatedSection" style="display: none;">
@@ -565,8 +568,7 @@
                                 </div>
                             </div>
 
-
-                            <!--single form panel-->
+                            <!--Gateway Assignment-->
                             <div class="card multisteps-form__panel p-3 border-radius-xl bg-white" data-animation="FadeIn">
                                 <h5 class="font-weight-bolder">Assigned Currencies</h5>
 
@@ -575,14 +577,13 @@
                                         <div class="nav-wrapper position-relative end-0">
                                             <ul class="nav nav-pills nav-fill p-1" role="tablist">
                                                 <li class="nav-item">
-                                                    <a class="nav-link mb-0 px-0 py-1 active  active " data-bs-toggle="tab"
-                                                        role="tab" aria-selected="true">
+                                                    <a class="nav-link mb-0 px-0 py-1 active  active " data-bs-toggle="tab" role="tab"
+                                                        aria-selected="true">
                                                         USD
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link mb-0 px-0 py-1 " data-bs-toggle="tab"
-                                                        role="tab" aria-selected="false">
+                                                    <a class="nav-link mb-0 px-0 py-1 " data-bs-toggle="tab" role="tab" aria-selected="false">
                                                         JPY
                                                     </a>
                                                 </li>
@@ -605,21 +606,35 @@
                                                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Gateway</th>
                                                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Tran. %</th>
                                                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Amount</th>
-                                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Duration (day)</th>
-                                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Approve Amount.</th>
-                                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Decline Amount.</th>
-                                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Amt Duration</th>
-                                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Approve Trn#</th>
-                                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Decline Trn#</th>
-                                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Refund Trn#</th>
+                                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Duration
+                                                            (day)</th>
+                                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Approve
+                                                            Amount.</th>
+                                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Decline
+                                                            Amount.</th>
+                                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Amt Duration
+                                                        </th>
+                                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Approve Trn#
+                                                        </th>
+                                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Decline Trn#
+                                                        </th>
+                                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Refund Trn#
+                                                        </th>
                                                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">CB Trn#</th>
-                                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Trn# Duration</th>
-                                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Decline Trn# (%)</th>
-                                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Refund Trn# (%)</th>
-                                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">CB Trn# (%)</th>
-                                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">(%) Duration</th>
-                                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Min Trn# Currency</th>
-                                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Currency</th>
+                                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Trn#
+                                                            Duration</th>
+                                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Decline Trn#
+                                                            (%)</th>
+                                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Refund Trn#
+                                                            (%)</th>
+                                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">CB Trn# (%)
+                                                        </th>
+                                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">(%) Duration
+                                                        </th>
+                                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Min Trn#
+                                                            Currency</th>
+                                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Currency
+                                                        </th>
                                                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Actions</th>
 
                                                     </tr>
@@ -793,10 +808,8 @@
 
                                     <div class="row">
                                         <div class="button-row d-flex mt-4 col-12">
-                                            <button class="btn bg-gradient-light mb-0 js-btn-prev" type="button"
-                                                title="Prev">Prev</button>
-                                            <button class="btn bg-gradient-dark ms-auto mb-0 js-btn-next" type="button"
-                                                title="Next">Next</button>
+                                            <button class="btn bg-gradient-light mb-0 js-btn-prev" type="button" title="Prev">Prev</button>
+                                            <button class="btn bg-gradient-dark ms-auto mb-0 js-btn-next" type="button" title="Next">Next</button>
                                         </div>
                                     </div>
                                 </div>
@@ -804,6 +817,454 @@
                             </div>
 
 
+                            <!--Card(s) Settings-->
+                            <div class="card multisteps-form__panel p-3 border-radius-xl bg-white" data-animation="FadeIn">
+                                <h5 class="font-weight-bolder">Assigned Currencies</h5>
+
+                                <div class="row align-items-center mb-3">
+                                    <div class="col-lg-4 col-sm-8">
+                                        <div class="nav-wrapper position-relative end-0">
+                                            <ul class="nav nav-pills nav-fill p-1" role="tablist">
+                                                <li class="nav-item">
+                                                    <a class="nav-link mb-0 px-0 py-1 active  active " data-bs-toggle="tab" role="tab"
+                                                        aria-selected="true">
+                                                        USD
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link mb-0 px-0 py-1 " data-bs-toggle="tab" role="tab" aria-selected="false">
+                                                        JPY
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="multisteps-form__content">
+
+                                    <div class="card mb-3">
+                                        <h5 class="font-weight-bolder">Current Applicable Fees</h5>
+
+                                        <div class="table-responsive mb-3">
+                                            <table class="table table-flush" id="datatable-basic">
+                                                <thead class="thead-light">
+                                                    <tr>
+                                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Card</th>
+                                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">MDR (%)</th>
+                                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Processing
+                                                        </th>
+                                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Decline</th>
+                                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Refund</th>
+                                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Chargeback
+                                                        </th>
+                                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">RR</th>
+                                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Assigned
+                                                        </th>
+                                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Next Update
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="text-sm font-weight-normal">Visa</td>
+                                                        <td class="text-sm font-weight-normal"><strong>7</strong><br>Flat: 7.00</td>
+                                                        <td class="text-sm font-weight-normal"><strong>0.5</strong><br>Flat: 0.50</td>
+                                                        <td class="text-sm font-weight-normal"><strong>0.5</strong><br>Flat: 0.50</td>
+                                                        <td class="text-sm font-weight-normal"><strong>20</strong><br>Flat: 20.00</td>
+                                                        <td class="text-sm font-weight-normal"><strong>50</strong><br>Ratio: 0.00% - 0.00%</td>
+                                                        <td class="text-sm font-weight-normal"><strong>10% 180 days</strong> <br>Flat: 0.00</td>
+                                                        <td class="text-sm font-weight-normal">17 March, 2025</td>
+                                                        <td class="text-sm font-weight-normal">
+                                                            01 April, 2025
+                                                            <div class="d-flex align-items-center mt-1">
+                                                                <a href="#" class="text-gray-500 hover:text-blue-500 px-1">
+                                                                    <i class="ti ti-pencil text-lg"></i>
+                                                                </a>
+                                                                <a href="#" class="text-gray-500 hover:text-green-500 px-1">
+                                                                    <i class="ti ti-rotate-2 text-lg"></i>
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-sm font-weight-normal">Mastercard</td>
+                                                        <td class="text-sm font-weight-normal"><strong>7</strong><br>Flat: 7.00</td>
+                                                        <td class="text-sm font-weight-normal"><strong>0.5</strong><br>Flat: 0.50</td>
+                                                        <td class="text-sm font-weight-normal"><strong>0.5</strong><br>Flat: 0.50</td>
+                                                        <td class="text-sm font-weight-normal"><strong>20</strong><br>Flat: 20.00</td>
+                                                        <td class="text-sm font-weight-normal"><strong>50</strong><br>Ratio: 0.00% - 0.00%</td>
+                                                        <td class="text-sm font-weight-normal"><strong>10% 180 days</strong> <br>Flat: 0.00</td>
+                                                        <td class="text-sm font-weight-normal">17 March, 2025</td>
+                                                        <td class="text-sm font-weight-normal">
+                                                            01 April, 2025
+                                                            <div class="d-flex align-items-center mt-1">
+                                                                <a href="#" class="text-gray-500 hover:text-blue-500 px-1">
+                                                                    <i class="ti ti-pencil text-lg"></i>
+                                                                </a>
+                                                                <a href="#" class="text-gray-500 hover:text-green-500 px-1">
+                                                                    <i class="ti ti-rotate-2 text-lg"></i>
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="card mb-3">
+                                        <h5 class="font-weight-bolder">Manage Card(s) & Fees For Partner</h5>
+                                        <div class="row align-items-center mb-3 ms-2 me-2">
+                                            <div class="col-lg-12 col-sm-8 mb-3">
+                                                <div class="nav-wrapper position-relative end-0">
+                                                    <ul class="nav nav-pills nav-fill p-1" role="tablist">
+                                                        <li class="nav-item">
+                                                            <a class="nav-link mb-0 px-0 py-1 active d-flex justify-content-between align-items-center"
+                                                                data-bs-toggle="tab" role="tab" aria-selected="true">
+                                                                <span class="text-center flex-grow-1">Visa</span>
+                                                                <i class="ti ti-adjustments-horizontal text-lg rotate-icon me-2"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link mb-0 px-0 py-1 active d-flex justify-content-between align-items-center"
+                                                                data-bs-toggle="tab" role="tab" aria-selected="true">
+                                                                <span class="text-center flex-grow-1">Mastercard</span>
+                                                                <i class="ti ti-adjustments-horizontal text-lg rotate-icon me-2"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link mb-0 px-0 py-1 active d-flex justify-content-between align-items-center"
+                                                                data-bs-toggle="tab" role="tab" aria-selected="true">
+                                                                <span class="text-center flex-grow-1">AMEX</span>
+                                                                <i class="ti ti-plus text-lg rotate-icon me-2"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link mb-0 px-0 py-1 active d-flex justify-content-between align-items-center"
+                                                                data-bs-toggle="tab" role="tab" aria-selected="true">
+                                                                <span class="text-center flex-grow-1">Discover</span>
+                                                                <i class="ti ti-plus text-lg rotate-icon me-2"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link mb-0 px-0 py-1 active d-flex justify-content-between align-items-center"
+                                                                data-bs-toggle="tab" role="tab" aria-selected="true">
+                                                                <span class="text-center flex-grow-1">JCB</span>
+                                                                <i class="ti ti-plus text-lg rotate-icon me-2"></i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div class="card mb-3">
+                                                <div class="row align-items-center ms-5 me-2 mt-3">
+                                                    <div class="col-lg-11 col-sm-8">
+                                                        <div class="nav-wrapper position-relative end-0">
+                                                            <ul class="nav nav-pills nav-fill p-1" role="tablist">
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link mb-0 px-0 py-1 active" data-bs-toggle="tab" role="tab"
+                                                                        aria-selected="true">
+                                                                        MDR
+                                                                    </a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" role="tab"
+                                                                        aria-selected="false">
+                                                                        Processing Fees
+                                                                    </a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" role="tab"
+                                                                        aria-selected="false">
+                                                                        Decline Fees
+                                                                    </a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" role="tab"
+                                                                        aria-selected="false">
+                                                                        Chargeback
+                                                                    </a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" role="tab"
+                                                                        aria-selected="false">
+                                                                        Refund
+                                                                    </a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" role="tab"
+                                                                        aria-selected="false">
+                                                                        Rolling Reserve
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="multisteps-form__content mt-3">
+                                                        <!-- Current MDR -->
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <label>Current MDR :</label> <strong> 7% </strong>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Calculation Type -->
+                                                        <div class="row">
+                                                            <div class="col-12">
+
+                                                                <div class="d-flex justify-content-between align-items-center">
+                                                                    <label>Calculation type *</label>
+                                                                    <!-- Main Radio Buttons -->
+                                                                    <div class="form-check form-check-inline ms-3">
+                                                                        <input class="form-check-input c_type_volume c_type_mdr_3" type="radio"
+                                                                            name="card_fees[3][mdr][type]" id="mdr_fee_type_3_v" value="volume"
+                                                                            data-fee-type="mdr" data-card-id="3" checked />
+                                                                        <label class="form-check-label" for="mdr_fee_type_3_v">Volume</label>
+                                                                    </div>
+
+                                                                    <!-- Separate "Fiat" Option -->
+                                                                    <div class="form-check form-check-inline ms-auto me-8">
+                                                                        <input class="form-check-input c_type_flat c_type_mdr_3" type="radio"
+                                                                            name="card_fees[3][mdr][type]" id="mdr_fee_type_3_f" value="flat"
+                                                                            data-fee-type="mdr" data-card-id="3" />
+                                                                        <label class="form-check-label" for="mdr_fee_type_3_f">Fiat</label>
+
+                                                                    </div>
+                                                                    <div class="row mt-3">
+                                                                        <div class="col-11 col-sm-6">
+                                                                            <div class="input-group">
+                                                                                <input id="percentage-input" class="form-control" type="number" />
+                                                                                <span class="input-group-text">%</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="input-group currency-padding total" style="margin-left: 8px;">
+
+                                                                </div>
+
+                                                                <div class="row mt-3">
+                                                                    <div class="col-11 col-sm-3">
+                                                                        <label>Transaction Volume >=</label>
+                                                                        <div class="input-group">
+                                                                            <input id="percentage-input" class="form-control" type="number" />
+                                                                            <span class="input-group-text">USD</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-12 col-sm-3 mt-3 mt-sm-0">
+                                                                        <label>Transaction Volume < </label>
+                                                                                <div class="input-group">
+                                                                                    <input id="percentage-input" class="form-control"
+                                                                                        type="number" />
+                                                                                    <span class="input-group-text">USD</span>
+                                                                                </div>
+                                                                    </div>
+                                                                    <div class="col-12 col-sm-3 mt-3 mt-sm-0">
+                                                                        <label>Fees</label>
+                                                                        <div class="input-group">
+                                                                            <input id="percentage-input" class="form-control" type="number" />
+                                                                            <span class="input-group-text">%</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="row mt-3">
+                                                                    <div class="col-11 col-sm-3">
+                                                                        <div class="input-group">
+                                                                            <input id="percentage-input" class="form-control" type="number" />
+                                                                            <span class="input-group-text">USD</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-12 col-sm-3 mt-3 mt-sm-0">
+                                                                        <div class="input-group">
+                                                                            <input id="percentage-input" class="form-control" type="number" />
+                                                                            <span class="input-group-text">USD</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-12 col-sm-3 mt-3 mt-sm-0">
+                                                                        <div class="input-group">
+                                                                            <input id="percentage-input" class="form-control" type="number" />
+                                                                            <span class="input-group-text">%</span>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="col-12 col-sm-3 mt-3 mt-sm-0">
+
+                                                                        <a href="#" class="text-gray-500 hover:text-red-500 px-1">
+                                                                            <i class="ti ti-trash text-lg"></i>
+                                                                        </a>
+
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="row mt-3">
+                                                                    <div class="col-11 col-sm-3">
+                                                                        <div class="input-group">
+                                                                            <input id="percentage-input" class="form-control" type="number" />
+                                                                            <span class="input-group-text">USD</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-12 col-sm-3 mt-3 mt-sm-0">
+                                                                        <div class="input-group">
+                                                                            <input id="percentage-input" class="form-control" type="number" />
+                                                                            <span class="input-group-text">USD</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-12 col-sm-3 mt-3 mt-sm-0">
+                                                                        <div class="input-group">
+                                                                            <input id="percentage-input" class="form-control" type="number" />
+                                                                            <span class="input-group-text">%</span>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="col-12 col-sm-3 mt-3 mt-sm-0">
+
+                                                                        <a href="#" class="text-gray-500 hover:text-red-500 px-1">
+                                                                            <i class="ti ti-trash text-lg"></i>
+                                                                        </a>
+
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="row mt-3 mb-3">
+                                                                    <div class="col-11 col-sm-3">
+                                                                        <div class="input-group">
+                                                                            <input id="percentage-input" class="form-control" type="number" />
+                                                                            <span class="input-group-text">USD</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-12 col-sm-3 mt-3 mt-sm-0">
+                                                                        <div class="input-group">
+                                                                            <input id="percentage-input" class="form-control" type="number" />
+                                                                            <span class="input-group-text">USD</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-12 col-sm-3 mt-3 mt-sm-0">
+                                                                        <div class="input-group">
+                                                                            <input id="percentage-input" class="form-control" type="number" />
+                                                                            <span class="input-group-text">%</span>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="col-12 col-sm-3 mt-3 mt-sm-0">
+
+                                                                        <a href="#" class="text-gray-500 hover:text-red-500 px-1">
+                                                                            <i class="ti ti-trash text-lg"></i>
+                                                                        </a>
+
+                                                                    </div>
+
+                                                                </div>
+
+                                                                <div class="button-container">
+                                                                    <button class="btn bg-gradient-primary btn-sm mb-3">
+                                                                        <span>Add New</span>
+                                                                    </button>
+                                                                    <div class="action-buttons">
+                                                                        <button class="btn bg-gradient-light btn-sm mr-2">
+                                                                            <span>Close</span>
+                                                                        </button>
+                                                                        <button class="btn bg-gradient-dark btn-sm">
+                                                                            <span>Save</span>
+                                                                        </button>
+                                                                        <div class="spacer"></div> <!-- Invisible spacer -->
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+
+                                                            <div class="horizontal-buttons">
+                                                                <button class="btn bg-gradient-light btn-sm mr-2">
+                                                                    <i class="ti ti-premium-rights"></i> Current Fee
+                                                                </button>
+                                                                <button class="btn bg-gradient-dark btn-sm mr-2">
+                                                                    <i class="ti ti-history"></i> History
+                                                                </button>
+                                                                <button class="btn bg-gradient-dark btn-sm">
+                                                                    <i class="ti ti-trash"></i> Remove
+                                                                </button>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="card mb-3">
+                                    <h5 class="font-weight-bolder">Apply Gateway Name </h5>
+
+                                    <div class="table-responsive mb-3 ms-3 me-3">
+
+                                        <table class="horizontal-input-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Amount</th>
+                                                    <th>Duration (day)</th>
+                                                    <th>Approve Amt.</th>
+                                                    <th>Decline Amt.</th>
+                                                    <th>Amt Duration</th>
+                                                    <th>Approve Trn#</th>
+                                                    <th>Decline Trn#</th>
+                                                    <th>Refund Trn#</th>
+                                                    <th>CB Trn#</th>
+                                                    <th>Trn# Duration</th>
+                                                    <th>Decline Trn# (%)</th>
+                                                    <th>Refund Trn# (%)</th>
+                                                    <th>CB Trn# (%)</th>
+                                                    <th>(%) Duration</th>
+                                                    <th>Min Trn#</th>
+                                                    <th>Currency</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><input type="text" placeholder="Amount"></td>
+                                                    <td><input type="text" placeholder="(Days)"></td>
+                                                    <td><input type="text" placeholder="App Amt"></td>
+                                                    <td><input type="text" placeholder="Dec Amt"></td>
+                                                    <td><input type="text" placeholder="(days)"></td>
+                                                    <td><input type="text" placeholder="App Trn"></td>
+                                                    <td><input type="text" placeholder="Dec Trn"></td>
+                                                    <td><input type="text" placeholder="Ref Trn"></td>
+                                                    <td><input type="text" placeholder="CB Trn"></td>
+                                                    <td><input type="text" placeholder="(days)"></td>
+                                                    <td><input type="text" placeholder="Dec (%)"></td>
+                                                    <td><input type="text" placeholder="Ref (%)"></td>
+                                                    <td><input type="text" placeholder="CB (%)"></td>
+                                                    <td><input type="text" placeholder="(days)"></td>
+                                                    <td><input type="text" placeholder="Trn #"></td>
+                                                    <td><input type="text" placeholder="USD"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <div style="display: flex; justify-content: center;">
+                                        <button class="btn bg-gradient-primary btn-sm mb-3">
+                                            <span>ASSIGN</span>
+                                        </button>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="button-row d-flex mt-4 col-12">
+                                        <button class="btn bg-gradient-light mb-0 js-btn-prev" type="button" title="Prev">Prev</button>
+                                        <button class="btn bg-gradient-dark ms-auto mb-0 js-btn-next" type="button" title="Next">Next</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Settings-->
                             <div class="card multisteps-form__panel p-3 border-radius-xl bg-white" data-animation="FadeIn">
                                 <h5 class="font-weight-bolder">Payment Information</h5>
                                 <div class="multisteps-form__content mt-3">
@@ -811,7 +1272,8 @@
                                     <div class="row">
                                         <div class="col-12">
                                             <label>Payout Condition *</label>
-                                            <select class="form-select app-filed form-select-sm multisteps-form__input" name="payout_condition" required="" data-dirrty-initial-value="">
+                                            <select class="form-select app-filed form-select-sm multisteps-form__input" name="payout_condition"
+                                                required="" data-dirrty-initial-value="">
                                                 <option value="" selected="">Select Payout Condition</option>
                                                 <option value="7DPO">7DPO</option>
                                                 <option value="2nd_4th_wednesday">2nd &amp; 4th Wednesday</option>
@@ -825,7 +1287,8 @@
                                     <div class="row mt-3">
                                         <div class="col-12">
                                             <label>Payout Minimum *</label>
-                                            <input class="multisteps-form__input form-control" type="number" placeholder="Enter minimum payout amount" />
+                                            <input class="multisteps-form__input form-control" type="number"
+                                                placeholder="Enter minimum payout amount" />
                                         </div>
                                     </div>
 
@@ -834,11 +1297,13 @@
                                         <div class="col-12">
                                             <label class="d-block mb-2">Fee Calculation Condition *</label>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="feeCalculationCondition" id="feeMonthly" value="monthly" required />
+                                                <input class="form-check-input" type="radio" name="feeCalculationCondition" id="feeMonthly"
+                                                    value="monthly" required />
                                                 <label class="form-check-label" for="feeMonthly">Monthly</label>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="feeCalculationCondition" id="feeOther" value="other" required />
+                                                <input class="form-check-input" type="radio" name="feeCalculationCondition" id="feeOther"
+                                                    value="other" required />
                                                 <label class="form-check-label" for="feeOther">Other</label>
                                             </div>
                                         </div>
@@ -848,11 +1313,13 @@
                                         <div class="col-12">
                                             <label class="d-block mb-2">Virtual Terminal</label>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="virtualTerminal" id="virtualTerminalOn" value="on" />
+                                                <input class="form-check-input" type="radio" name="virtualTerminal" id="virtualTerminalOn"
+                                                    value="on" />
                                                 <label class="form-check-label" for="virtualTerminalOn">ON</label>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="virtualTerminal" id="virtualTerminalOff" value="off" />
+                                                <input class="form-check-input" type="radio" name="virtualTerminal" id="virtualTerminalOff"
+                                                    value="off" />
                                                 <label class="form-check-label" for="virtualTerminalOff">OFF</label>
                                             </div>
                                         </div>
@@ -863,11 +1330,13 @@
                                         <div class="col-12">
                                             <label class="d-block mb-2">Ignore Velocity Decline</label>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="ignoreVelocityDecline" id="ignoreVelocityYes" value="yes" />
+                                                <input class="form-check-input" type="radio" name="ignoreVelocityDecline" id="ignoreVelocityYes"
+                                                    value="yes" />
                                                 <label class="form-check-label" for="ignoreVelocityYes">Yes</label>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="ignoreVelocityDecline" id="ignoreVelocityNo" value="no" />
+                                                <input class="form-check-input" type="radio" name="ignoreVelocityDecline" id="ignoreVelocityNo"
+                                                    value="no" />
                                                 <label class="form-check-label" for="ignoreVelocityNo">No</label>
                                             </div>
                                         </div>
@@ -878,11 +1347,13 @@
                                         <div class="col-12">
                                             <label class="d-block mb-2">Ignore aVelocity Decline</label>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="ignoreAVelocityDecline" id="ignoreAVelocityYes" value="yes" />
+                                                <input class="form-check-input" type="radio" name="ignoreAVelocityDecline" id="ignoreAVelocityYes"
+                                                    value="yes" />
                                                 <label class="form-check-label" for="ignoreAVelocityYes">Yes</label>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="ignoreAVelocityDecline" id="ignoreAVelocityNo" value="no" />
+                                                <input class="form-check-input" type="radio" name="ignoreAVelocityDecline" id="ignoreAVelocityNo"
+                                                    value="no" />
                                                 <label class="form-check-label" for="ignoreAVelocityNo">No</label>
                                             </div>
                                         </div>
@@ -893,15 +1364,18 @@
                                         <div class="col-12">
                                             <label class="d-block mb-2">Gentius ID Verification</label>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="gentiusIDVerification" id="gentiusNo" value="no" />
+                                                <input class="form-check-input" type="radio" name="gentiusIDVerification" id="gentiusNo"
+                                                    value="no" />
                                                 <label class="form-check-label" for="gentiusNo">NO</label>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="gentiusIDVerification" id="gentiusYesAll" value="yesAll" />
+                                                <input class="form-check-input" type="radio" name="gentiusIDVerification" id="gentiusYesAll"
+                                                    value="yesAll" />
                                                 <label class="form-check-label" for="gentiusYesAll">YES for all transactions</label>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="gentiusIDVerification" id="gentiusYesCB" value="yesCB" />
+                                                <input class="form-check-input" type="radio" name="gentiusIDVerification" id="gentiusYesCB"
+                                                    value="yesCB" />
                                                 <label class="form-check-label" for="gentiusYesCB">YES when the CB is over 0.375%</label>
                                             </div>
                                         </div>
@@ -913,7 +1387,8 @@
                                             <label>AcuityTec System Override</label>
                                             <select class="multisteps-form__input form-control">
                                                 <option value="" disabled selected>Select Option</option>
-                                                <option value="followGlobal">Follow Global Setting (Current Settings: Do not check with AcuityTec)</option>
+                                                <option value="followGlobal">Follow Global Setting (Current Settings: Do not check with AcuityTec)
+                                                </option>
                                                 <option value="enabled">Enabled (Always check with AcuityTec)</option>
                                                 <option value="disabled">Disabled (Never check with AcuityTec)</option>
                                             </select>
@@ -926,19 +1401,23 @@
                                             <label>Send Email To Customer/Partner</label>
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" id="sendSalesEmail" />
-                                                <label class="form-check-label" for="sendSalesEmail">Send sales/purchase confirmation email to customer</label>
+                                                <label class="form-check-label" for="sendSalesEmail">Send sales/purchase confirmation email to
+                                                    customer</label>
                                             </div>
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" id="sendRefundEmail" />
-                                                <label class="form-check-label" for="sendRefundEmail">Send refund confirmation email to customer</label>
+                                                <label class="form-check-label" for="sendRefundEmail">Send refund confirmation email to
+                                                    customer</label>
                                             </div>
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" id="sendSatisfactionEmail" />
-                                                <label class="form-check-label" for="sendSatisfactionEmail">Send satisfaction guaranteed email to customer</label>
+                                                <label class="form-check-label" for="sendSatisfactionEmail">Send satisfaction guaranteed email to
+                                                    customer</label>
                                             </div>
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" id="sendTransactionEmail" />
-                                                <label class="form-check-label" for="sendTransactionEmail">Send transaction successfully processed email to Partner</label>
+                                                <label class="form-check-label" for="sendTransactionEmail">Send transaction successfully processed
+                                                    email to Partner</label>
                                             </div>
                                         </div>
                                     </div>
@@ -951,6 +1430,7 @@
                                 </div>
                             </div>
 
+                            <!--Others-->
                             <div class="card multisteps-form__panel p-3 border-radius-xl bg-white" data-animation="FadeIn">
                                 <h5 class="font-weight-bolder">Payment Information</h5>
                                 <h5 class="font-weight-bolder">Payment Configuration</h5>
@@ -960,11 +1440,13 @@
                                         <div class="col-12">
                                             <label>Allowed Bank Hosted Payment *</label>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="allowedBankHostedPayment" id="allowedBankYes" value="yes" required />
+                                                <input class="form-check-input" type="radio" name="allowedBankHostedPayment" id="allowedBankYes"
+                                                    value="yes" required />
                                                 <label class="form-check-label" for="allowedBankYes">Yes</label>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="allowedBankHostedPayment" id="allowedBankNo" value="no" required />
+                                                <input class="form-check-input" type="radio" name="allowedBankHostedPayment" id="allowedBankNo"
+                                                    value="no" required />
                                                 <label class="form-check-label" for="allowedBankNo">No</label>
                                             </div>
                                         </div>
@@ -975,11 +1457,13 @@
                                         <div class="col-12">
                                             <label>Allowed Hosted Payment *</label>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="allowedHostedPayment" id="allowedHostedYes" value="yes" required />
+                                                <input class="form-check-input" type="radio" name="allowedHostedPayment" id="allowedHostedYes"
+                                                    value="yes" required />
                                                 <label class="form-check-label" for="allowedHostedYes">Yes</label>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="allowedHostedPayment" id="allowedHostedNo" value="no" required />
+                                                <input class="form-check-input" type="radio" name="allowedHostedPayment" id="allowedHostedNo"
+                                                    value="no" required />
                                                 <label class="form-check-label" for="allowedHostedNo">No</label>
                                             </div>
                                         </div>
@@ -989,7 +1473,8 @@
                                     <div class="row mt-3">
                                         <div class="col-12">
                                             <label>Instant Payment Notification ("IPN") URL</label>
-                                            <small class="form-text text-muted d-block mb-2">PaymentTechnologies sends IPN message to the URL that you specify.</small>
+                                            <small class="form-text text-muted d-block mb-2">PaymentTechnologies sends IPN message to the URL that
+                                                you specify.</small>
                                             <input class="multisteps-form__input form-control" type="url" placeholder="Enter IPN URL" />
                                         </div>
                                     </div>
@@ -998,7 +1483,8 @@
                                     <div class="row mt-3">
                                         <div class="col-12">
                                             <label>Success URL</label>
-                                            <small class="form-text text-muted d-block mb-2">Sends the customer back to this URL if the transaction is successful.</small>
+                                            <small class="form-text text-muted d-block mb-2">Sends the customer back to this URL if the transaction
+                                                is successful.</small>
                                             <input class="multisteps-form__input form-control" type="url" placeholder="Enter Success URL" />
                                         </div>
                                     </div>
@@ -1007,8 +1493,10 @@
                                     <div class="row mt-3">
                                         <div class="col-12">
                                             <label>Failed/Cancelled URL</label>
-                                            <small class="form-text text-muted d-block mb-2">Sends the customer back to this URL if the transaction is declined.</small>
-                                            <input class="multisteps-form__input form-control" type="url" placeholder="Enter Failed/Cancelled URL" />
+                                            <small class="form-text text-muted d-block mb-2">Sends the customer back to this URL if the transaction
+                                                is declined.</small>
+                                            <input class="multisteps-form__input form-control" type="url"
+                                                placeholder="Enter Failed/Cancelled URL" />
                                         </div>
                                     </div>
 
@@ -1018,7 +1506,8 @@
                                             <label>CBD and Related Products</label>
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" id="cbdNoThc" />
-                                                <label class="form-check-label" for="cbdNoThc">CBD (Derived from Industrial Hemp with No THC)</label>
+                                                <label class="form-check-label" for="cbdNoThc">CBD (Derived from Industrial Hemp with No
+                                                    THC)</label>
                                             </div>
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" id="cbdEdiblesNoThc" />
@@ -1030,15 +1519,18 @@
                                             </div>
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" id="cbdLessThanPointThreeThc" />
-                                                <label class="form-check-label" for="cbdLessThanPointThreeThc">CBD (with equal to or less than 0.3% THC)</label>
+                                                <label class="form-check-label" for="cbdLessThanPointThreeThc">CBD (with equal to or less than 0.3%
+                                                    THC)</label>
                                             </div>
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" id="cbdEdiblesLessThanPointThreeThc" />
-                                                <label class="form-check-label" for="cbdEdiblesLessThanPointThreeThc">CBD Infused Edibles (less than 0.3% THC)</label>
+                                                <label class="form-check-label" for="cbdEdiblesLessThanPointThreeThc">CBD Infused Edibles (less than
+                                                    0.3% THC)</label>
                                             </div>
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" id="cbdTopicalsLessThanPointThreeThc" />
-                                                <label class="form-check-label" for="cbdTopicalsLessThanPointThreeThc">CBD for Topical Use (less than 0.3% THC)</label>
+                                                <label class="form-check-label" for="cbdTopicalsLessThanPointThreeThc">CBD for Topical Use (less
+                                                    than 0.3% THC)</label>
                                             </div>
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" id="cannabinol" />
@@ -1171,11 +1663,13 @@
                                         <div class="col-12">
                                             <label>Validate Domain for Transaction</label>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="validateDomain" id="validateDomainYes" value="yes" />
+                                                <input class="form-check-input" type="radio" name="validateDomain" id="validateDomainYes"
+                                                    value="yes" />
                                                 <label class="form-check-label" for="validateDomainYes">Yes</label>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="validateDomain" id="validateDomainNo" value="no" />
+                                                <input class="form-check-input" type="radio" name="validateDomain" id="validateDomainNo"
+                                                    value="no" />
                                                 <label class="form-check-label" for="validateDomainNo">No</label>
                                             </div>
                                         </div>
@@ -1206,192 +1700,14 @@
                                         </div>
                                     </div>
                                 </div>
-
-
-
-
-
-                                <!--single form panel-->
-                                <div class="card multisteps-form__panel p-3 border-radius-xl bg-white h-100"
-                                    data-animation="FadeIn">
-                                    <h5 class="font-weight-bolder">Profile</h5>
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <label>Public Email</label>
-                                            <input class="multisteps-form__input form-control" type="text"
-                                                placeholder="Use an address you don't use frequently." />
-                                        </div>
-                                        <div class="col-12 mt-3">
-                                            <label>Bio</label>
-                                            <textarea class="multisteps-form__textarea form-control" rows="5"
-                                                placeholder="Say a few words about who you are or what you're working on."></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="button-row d-flex mt-4">
-                                        <button class="btn bg-gradient-light mb-0 js-btn-prev" type="button"
-                                            title="Prev">Prev</button>
-                                        <button class="btn bg-gradient-dark ms-auto mb-0" type="button"
-                                            title="Send">Send</button>
-                                    </div>
-
-                                </div>
-
-                                <div class="card multisteps-form__panel p-3 border-radius-xl bg-white h-100" data-animation="FadeIn">
-                                    <h5 class="font-weight-bolder">Payment Information</h5>
-                                    <div class="multisteps-form__content mt-3">
-                                        <!-- Payout Condition -->
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <label>Payout Condition *</label>
-                                                <select class="form-select app-filed form-select-sm multisteps-form__input" name="payout_condition" required="" data-dirrty-initial-value="">
-                                                    <option value="" selected="">Select Payout Condition</option>
-                                                    <option value="7DPO">7DPO</option>
-                                                    <option value="2nd_4th_wednesday">2nd &amp; 4th Wednesday</option>
-                                                    <option value="1weekArrear">1 Week in Arrears</option>
-                                                    <option value="every_wednesday">2 Weeks in Arrears</option>
-                                                </select>
-                                            </div>
-                                        </div>
-
-                                        <!-- Payout Minimum -->
-                                        <div class="row mt-3">
-                                            <div class="col-12">
-                                                <label>Payout Minimum *</label>
-                                                <input class="multisteps-form__input form-control" type="number" placeholder="Enter minimum payout amount" />
-                                            </div>
-                                        </div>
-
-                                        <!-- Fee Calculation Condition -->
-                                        <div class="row mt-3">
-                                            <div class="col-12">
-                                                <label class="d-block mb-2">Fee Calculation Condition *</label>
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="feeCalculationCondition" id="feeMonthly" value="monthly" required />
-                                                    <label class="form-check-label" for="feeMonthly">Monthly</label>
-                                                </div>
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="feeCalculationCondition" id="feeOther" value="other" required />
-                                                    <label class="form-check-label" for="feeOther">Other</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Virtual Terminal -->
-                                        <div class="row mt-3">
-                                            <div class="col-12">
-                                                <label class="d-block mb-2">Virtual Terminal</label>
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="virtualTerminal" id="virtualTerminalOn" value="on" />
-                                                    <label class="form-check-label" for="virtualTerminalOn">ON</label>
-                                                </div>
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="virtualTerminal" id="virtualTerminalOff" value="off" />
-                                                    <label class="form-check-label" for="virtualTerminalOff">OFF</label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Ignore Velocity Decline -->
-                                        <div class="row mt-3">
-                                            <div class="col-12">
-                                                <label class="d-block mb-2">Ignore Velocity Decline</label>
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="ignoreVelocityDecline" id="ignoreVelocityYes" value="yes" />
-                                                    <label class="form-check-label" for="ignoreVelocityYes">Yes</label>
-                                                </div>
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="ignoreVelocityDecline" id="ignoreVelocityNo" value="no" />
-                                                    <label class="form-check-label" for="ignoreVelocityNo">No</label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Ignore aVelocity Decline -->
-                                        <div class="row mt-3">
-                                            <div class="col-12">
-                                                <label class="d-block mb-2">Ignore aVelocity Decline</label>
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="ignoreAVelocityDecline" id="ignoreAVelocityYes" value="yes" />
-                                                    <label class="form-check-label" for="ignoreAVelocityYes">Yes</label>
-                                                </div>
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="ignoreAVelocityDecline" id="ignoreAVelocityNo" value="no" />
-                                                    <label class="form-check-label" for="ignoreAVelocityNo">No</label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Gentius ID Verification -->
-                                        <div class="row mt-3">
-                                            <div class="col-12">
-                                                <label class="d-block mb-2">Gentius ID Verification</label>
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="gentiusIDVerification" id="gentiusNo" value="no" />
-                                                    <label class="form-check-label" for="gentiusNo">NO</label>
-                                                </div>
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="gentiusIDVerification" id="gentiusYesAll" value="yesAll" />
-                                                    <label class="form-check-label" for="gentiusYesAll">YES for all transactions</label>
-                                                </div>
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="gentiusIDVerification" id="gentiusYesCB" value="yesCB" />
-                                                    <label class="form-check-label" for="gentiusYesCB">YES when the CB is over 0.375%</label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- AcuityTec System Override -->
-                                        <div class="row mt-3">
-                                            <div class="col-12">
-                                                <label>AcuityTec System Override</label>
-                                                <select class="multisteps-form__input form-control">
-                                                    <option value="" disabled selected>Select Option</option>
-                                                    <option value="followGlobal">Follow Global Setting (Current Settings: Do not check with AcuityTec)</option>
-                                                    <option value="enabled">Enabled (Always check with AcuityTec)</option>
-                                                    <option value="disabled">Disabled (Never check with AcuityTec)</option>
-                                                </select>
-                                            </div>
-                                        </div>
-
-                                        <!-- Send Email To Customer/Partner -->
-                                        <div class="row mt-3">
-                                            <div class="col-12">
-                                                <label>Send Email To Customer/Partner</label>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="sendSalesEmail" />
-                                                    <label class="form-check-label" for="sendSalesEmail">Send sales/purchase confirmation email to customer</label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="sendRefundEmail" />
-                                                    <label class="form-check-label" for="sendRefundEmail">Send refund confirmation email to customer</label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="sendSatisfactionEmail" />
-                                                    <label class="form-check-label" for="sendSatisfactionEmail">Send satisfaction guaranteed email to customer</label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="sendTransactionEmail" />
-                                                    <label class="form-check-label" for="sendTransactionEmail">Send transaction successfully processed email to Partner</label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Action Buttons -->
-                                        <div class="button-row d-flex mt-4">
-                                            <button class="btn bg-gradient-light mb-0 js-btn-prev" type="button" title="Prev">Prev</button>
-                                            <button class="btn bg-gradient-dark ms-auto mb-0" type="button" title="Send">Send</button>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    @include('layouts.footers.auth.footer')
+</div>
+@include('layouts.footers.auth.footer')
 </div>
 @endsection
 
@@ -1476,5 +1792,69 @@
 
     .font-weight-bolder {
         margin: 1rem;
+    }
+
+    .d-flex {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .rotate-icon {
+        color: gray;
+        /* Default color */
+        transition: transform 0.3s ease;
+        /* Smooth rotation transition */
+    }
+
+    .rotate-icon:hover {
+        color: orangered;
+        /* Change color on hover */
+    }
+
+    .input-group>.form-control {
+        border-top-right-radius: 0.25rem;
+        border-bottom-right-radius: 0.25rem;
+        border-right: none !important;
+        /* Match Bootstrap's default border color */
+    }
+
+    .input-group>.input-group-text {
+        border-top-left-radius: 0.25rem;
+        border-bottom-left-radius: 0.25rem;
+        border-left: none !important;
+        /* Match Bootstrap's default border color */
+    }
+
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        /* Stack buttons vertically */
+        align-items: flex-start;
+        /* Align buttons to the left */
+    }
+
+    .horizontal-buttons {
+        display: flex;
+        /* Align buttons horizontally */
+        gap: 0.5rem;
+        /* Add spacing between the buttons */
+        align-items: center;
+        /* Vertically center the buttons */
+    }
+
+    .action-buttons {
+        display: flex;
+        justify-content: flex-end;
+        /* Align buttons to the far right */
+        gap: 0.5rem;
+        /* Add spacing between the buttons */
+        width: 100%;
+        /* Ensure the container spans the full width */
+    }
+
+    .spacer {
+        width: 5rem;
+        /* Add space equivalent to the desired margin */
     }
 </style>
