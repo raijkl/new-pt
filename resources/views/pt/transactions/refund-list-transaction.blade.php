@@ -140,9 +140,8 @@
                         </div>
                         <div class="ms-auto my-auto mt-lg-0 mt-4">
                             <div class="ms-auto my-auto">
-                                <a href="{{ route('partners', ['page' => 'add']) }}" class="btn bg-gradient-primary btn-sm mb-0">
-                                    +&nbsp; New Partner
-                                </a>
+                                <a href="./new-product.html" class="btn bg-gradient-primary btn-sm mb-0"
+                                    target="_blank">+&nbsp; New Partner</a>
                                 <button type="button" class="btn btn-outline-primary btn-sm mb-0" data-bs-toggle="modal"
                                     data-bs-target="#import">
                                     Import
@@ -284,7 +283,7 @@
                             <td>
                                 <div class="flex items-center gap-2">
                                     <!-- Edit Button -->
-                                    <a href="{{ route('transactions', ['page' => 'partner-transaction']) }}" class="text-gray-500 hover:text-blue-500 px-2">
+                                    <a href="#" class="text-gray-500 hover:text-blue-500 px-2">
                                         <i class="ti ti-pencil text-lg"></i>
                                     </a>
 

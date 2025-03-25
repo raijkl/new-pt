@@ -53,6 +53,90 @@
                 </div>
             </li>
             <li class="nav-item">
+                <a data-bs-toggle="collapse" href="#transactionCollapse" class="nav-link {{ in_array(request()->route('page'), ['manage-transaction', 'partner-transaction', 'refund-entry-transaction', 'refund-list-transaction', 'cb-entry-transaction', 'cb-list-transaction', 'buyer-transaction', 'bank-transaction']) ? 'active' : '' }}"
+                    aria-controls="transactionCollapse" role="button" aria-expanded="{{ in_array(request()->route('page'), ['manage-transaction', 'partner-transaction', 'refund-entry-transaction', 'refund-list-transaction', 'cb-entry-transaction', 'cb-list-transaction', 'buyer-transaction', 'bank-transaction']) ? 'true' : 'false' }}">
+                    <div class="icon icon-shape icon-sm text-center d-flex align-items-center justify-content-center">
+                        <i class="ni ni-briefcase-24 text-primary text-sm opacity-10"></i>
+                    </div>
+                    <span class="nav-link-text ms-1">Transaction</span>
+                </a>
+                <div class="collapse {{ in_array(request()->route('page'), ['manage-transaction', 'partner-transaction', 'refund-entry-transaction', 'refund-list-transaction', 'cb-entry-transaction', 'cb-list-transaction', 'buyer-transaction', 'bank-transaction']) ? 'show' : '' }}" id="transactionCollapse">
+                    <ul class="nav ms-4">
+                        <!-- Manage Transaction -->
+                        <li class="nav-item">
+                            <a class="nav-link {{ request()->routeIs('transactions') && request()->route('page') === 'manage-transaction' ? 'active' : '' }}"
+                                href="{{ route('transactions', ['page' => 'manage-transaction']) }}">
+                                <span class="sidenav-mini-icon"> M </span>
+                                <span class="sidenav-normal"> Manage Transaction </span>
+                            </a>
+                        </li>
+
+                        <!-- Partner Transaction -->
+                        <li class="nav-item">
+                            <a class="nav-link {{ request()->routeIs('transactions') && request()->route('page') === 'partner-transaction' ? 'active' : '' }}"
+                                href="{{ route('transactions', ['page' => 'partner-transaction']) }}">
+                                <span class="sidenav-mini-icon"> P </span>
+                                <span class="sidenav-normal"> Partner Transaction </span>
+                            </a>
+                        </li>
+
+                        <!-- Refund Entry -->
+                        <li class="nav-item">
+                            <a class="nav-link {{ request()->routeIs('transactions') && request()->route('page') === 'refund-entry-transaction' ? 'active' : '' }}"
+                                href="{{ route('transactions', ['page' => 'refund-entry-transaction']) }}">
+                                <span class="sidenav-mini-icon"> R </span>
+                                <span class="sidenav-normal"> Refund Entry </span>
+                            </a>
+                        </li>
+
+                        <!-- Refund List -->
+                        <li class="nav-item">
+                            <a class="nav-link {{ request()->routeIs('transactions') && request()->route('page') === 'refund-list-transaction' ? 'active' : '' }}"
+                                href="{{ route('transactions', ['page' => 'refund-list-transaction']) }}">
+                                <span class="sidenav-mini-icon"> L </span>
+                                <span class="sidenav-normal"> Refund List </span>
+                            </a>
+                        </li>
+
+                        <!-- Charge Back Entry -->
+                        <li class="nav-item">
+                            <a class="nav-link {{ request()->routeIs('transactions') && request()->route('page') === 'cb-entry-transaction' ? 'active' : '' }}"
+                                href="{{ route('transactions', ['page' => 'cb-entry-transaction']) }}">
+                                <span class="sidenav-mini-icon"> C </span>
+                                <span class="sidenav-normal"> Charge Back Entry </span>
+                            </a>
+                        </li>
+
+                        <!-- Charge Back List -->
+                        <li class="nav-item">
+                            <a class="nav-link {{ request()->routeIs('transactions') && request()->route('page') === 'cb-list-transaction' ? 'active' : '' }}"
+                                href="{{ route('transactions', ['page' => 'cb-list-transaction']) }}">
+                                <span class="sidenav-mini-icon"> B </span>
+                                <span class="sidenav-normal"> Charge Back List </span>
+                            </a>
+                        </li>
+
+                        <!-- Buyer Transaction Search -->
+                        <li class="nav-item">
+                            <a class="nav-link {{ request()->routeIs('transactions') && request()->route('page') === 'buyer-transaction' ? 'active' : '' }}"
+                                href="{{ route('transactions', ['page' => 'buyer-transaction']) }}">
+                                <span class="sidenav-mini-icon"> S </span>
+                                <span class="sidenav-normal"> Buyer Transaction Search </span>
+                            </a>
+                        </li>
+
+                        <!-- Bank Hosted Transaction -->
+                        <li class="nav-item">
+                            <a class="nav-link {{ request()->routeIs('transactions') && request()->route('page') === 'bank-transaction' ? 'active' : '' }}"
+                                href="{{ route('transactions', ['page' => 'bank-transaction']) }}">
+                                <span class="sidenav-mini-icon"> H </span>
+                                <span class="sidenav-normal"> Bank Hosted Transaction </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item">
                 <a data-bs-toggle="collapse" href="#dashboardsExamples" class="nav-link {{ Route::currentRouteName() == 'dashboards' ? 'active' : '' }}"
                     aria-controls="dashboardsExamples" role="button" aria-expanded="false">
                     <div class="icon icon-shape icon-sm text-center d-flex align-items-center justify-content-center">

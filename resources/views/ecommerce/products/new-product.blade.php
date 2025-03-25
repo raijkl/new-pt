@@ -257,7 +257,7 @@
                                                     title="Next">Next</button>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> 
                                     <!--single form panel-->
                                     <div class="card multisteps-form__panel p-3 border-radius-xl bg-white"
                                         data-animation="FadeIn">

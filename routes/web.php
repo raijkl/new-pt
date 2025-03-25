@@ -97,6 +97,9 @@ Route::group(['middleware' => 'auth'], function () {
     //new routes
     Route::get('/pt/partner/{page}', [PageController::class, 'partners'])->name('partners');
 
+    // Transactions route
+    Route::get('/pt/transactions/{page}', [PageController::class, 'transactions'])->name('transactions');
+
     Route::get('/{page}', [PageController::class, 'dashboards'])->name('dashboards');
 
     Route::get('/pages/profile/{page}', [PageController::class, 'profiles'])->name('profiles');

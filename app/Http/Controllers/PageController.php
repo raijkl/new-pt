@@ -19,6 +19,19 @@ class PageController extends Controller
 
         return abort(404);
     }
+
+
+    public function transactions(string $page)
+    {
+        // Check if the view exists in the "pt.transactions" directory
+        if (view()->exists("pt.transactions.{$page}")) {
+            return view("pt.transactions.{$page}");
+        }
+
+        // Return a 404 error if the view does not exist
+        return abort(404);
+    }
+
     public function dashboards(string $page)
     {
         if (view()->exists("dashboards.{$page}")) {

@@ -2824,7 +2824,9 @@
                                     <!-- Action Buttons -->
                                     <div class="button-row d-flex mt-4">
                                         <button class="btn bg-gradient-light mb-0 js-btn-prev" type="button" title="Prev">Prev</button>
-                                        <button class="btn bg-gradient-dark ms-auto mb-0" type="button" title="Send">Save</button>
+                                        <button class="btn bg-gradient-dark ms-auto mb-0" type="button" title="Send" onclick="window.location.href='{{ route('partners', ['page' => 'partner']) }}'">
+                                            Save
+                                        </button>
                                     </div>
 
                                 </div>
