@@ -137,6 +137,120 @@
                 </div>
             </li>
             <li class="nav-item">
+                <a data-bs-toggle="collapse" href="#gatewayCollapse" class="nav-link {{ in_array(request()->route('page'), ['index', 'approval-decline-by-date', 'approval-decline-by-date', 'approval-decline-by-category', 'approval-decline-by-gateway', 'approval-decline-by-partner', 'approval-decline-by-gateway', 'approval-decline-by-card-type', 'pm-gateway-daily-report', 'failed-response-by-date']) ? 'active' : '' }}"
+                    aria-controls="gatewayCollapse" role="button" aria-expanded="{{ in_array(request()->route('page'), ['index', 'reports', 'update']) ? 'true' : 'false' }}">
+                    <div class="icon icon-shape icon-sm text-center d-flex align-items-center justify-content-center">
+                        <i class="ni ni-briefcase-24 text-primary text-sm opacity-10"></i>
+                    </div>
+                    <span class="nav-link-text ms-1">Gateway</span>
+                </a>
+                <div class="collapse {{ in_array(request()->route('page'), ['index', 'approval-decline-by-date', 'approval-decline-by-date', 'approval-decline-by-category', 'approval-decline-by-gateway', 'approval-decline-by-partner', 'approval-decline-by-gateway', 'approval-decline-by-card-type', 'pm-gateway-daily-report', 'failed-response-by-date']) ? 'show' : '' }}" id="gatewayCollapse">
+                    <ul class="nav ms-4">
+                        <!-- View Partner -->
+                        <li class="nav-item">
+                            <a class="nav-link {{ request()->routeIs('gateways') && request()->route('page') === 'index' ? 'active' : '' }}"
+                                href="{{ route('gateways', ['page' => 'index']) }}">
+                                <span class="sidenav-mini-icon"> P </span>
+                                <span class="sidenav-normal"> Manage Gateway </span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{ request()->routeIs('gateways') && request()->route('page') === 'approval-decline-by-date' ? 'active' : '' }}"
+                                href="{{ route('gateways', ['page' => 'approval-decline-by-date']) }}">
+                                <span class="sidenav-mini-icon"> P </span>
+                                <span class="sidenav-normal"> Approval Decline by Date </span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{ request()->routeIs('gateways') && request()->route('page') === 'approval-decline-by-category' ? 'active' : '' }}"
+                                href="{{ route('gateways', ['page' => 'approval-decline-by-category']) }}">
+                                <span class="sidenav-mini-icon"> P </span>
+                                <span class="sidenav-normal"> Approval Decline by Category </span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{ request()->routeIs('gateways') && request()->route('page') === 'approval-decline-by-gateway' ? 'active' : '' }}"
+                                href="{{ route('gateways', ['page' => 'approval-decline-by-gateway']) }}">
+                                <span class="sidenav-mini-icon"> P </span>
+                                <span class="sidenav-normal"> Approval Decline by Gateway and PM</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{ request()->routeIs('gateways') && request()->route('page') === 'approval-decline-by-partner' ? 'active' : '' }}"
+                                href="{{ route('gateways', ['page' => 'approval-decline-by-partner']) }}">
+                                <span class="sidenav-mini-icon"> P </span>
+                                <span class="sidenav-normal"> Approval Decline by Partner </span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{ request()->routeIs('gateways') && request()->route('page') === 'approval-decline-by-card-type' ? 'active' : '' }}"
+                                href="{{ route('gateways', ['page' => 'approval-decline-by-card-type']) }}">
+                                <span class="sidenav-mini-icon"> P </span>
+                                <span class="sidenav-normal"> Approval Decline by Card Type, Gateway and PM </span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{ request()->routeIs('gateways') && request()->route('page') === 'pm-gateway-daily-report' ? 'active' : '' }}"
+                                href="{{ route('gateways', ['page' => 'pm-gateway-daily-report']) }}">
+                                <span class="sidenav-mini-icon"> P </span>
+                                <span class="sidenav-normal"> PM and Gateway Daily Report </span>
+                            </a>
+                        </li><li class="nav-item">
+                            <a class="nav-link {{ request()->routeIs('gateways') && request()->route('page') === 'failed-response-by-date' ? 'active' : '' }}"
+                                href="{{ route('gateways', ['page' => 'failed-response-by-date']) }}">
+                                <span class="sidenav-mini-icon"> P </span>
+                                <span class="sidenav-normal"> Failed Responses by Date</span>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a data-bs-toggle="collapse" href="#isoCollapse" class="nav-link {{ in_array(request()->route('page'), ['iso', 'sub-iso', 'sumnmary-iso', 'summary-sub-iso']) ? 'active' : '' }}"
+                    aria-controls="isoCollapse" role="button" aria-expanded="{{ in_array(request()->route('page'), ['index', 'reports', 'update']) ? 'true' : 'false' }}">
+                    <div class="icon icon-shape icon-sm text-center d-flex align-items-center justify-content-center">
+                        <i class="ni ni-briefcase-24 text-primary text-sm opacity-10"></i>
+                    </div>
+                    <span class="nav-link-text ms-1">ISO</span>
+                </a>
+                <div class="collapse {{ in_array(request()->route('page'), ['iso', 'sub-iso', 'sumnmary-iso', 'summary-sub-iso']) ? 'show' : '' }}" id="isoCollapse">
+                    <ul class="nav ms-4">
+                        <!-- View Partner -->
+                        <li class="nav-item">
+                            <a class="nav-link {{ request()->routeIs('isom') && request()->route('page') === 'iso' ? 'active' : '' }}"
+                                href="{{ route('isom', ['page' => 'iso']) }}">
+                                <span class="sidenav-mini-icon"> P </span>
+                                <span class="sidenav-normal"> Manage ISO </span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{ request()->routeIs('isom') && request()->route('page') === 'sub-iso' ? 'active' : '' }}"
+                                href="{{ route('isom', ['page' => 'sub-iso']) }}">
+                                <span class="sidenav-mini-icon"> P </span>
+                                <span class="sidenav-normal"> Manage Sub ISO </span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{ request()->routeIs('isom') && request()->route('page') === 'sumnmary-iso' ? 'active' : '' }}"
+                                href="{{ route('isom', ['page' => 'summary-iso']) }}">
+                                <span class="sidenav-mini-icon"> P </span>
+                                <span class="sidenav-normal"> ISO Commission Summary </span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{ request()->routeIs('isom') && request()->route('page') === 'summary-sub-iso' ? 'active' : '' }}"
+                                href="{{ route('isom', ['page' => 'summary-sub-iso']) }}">
+                                <span class="sidenav-mini-icon"> P </span>
+                                <span class="sidenav-normal"> Sub ISO Earning </span>
+                            </a>
+                        </li>
+                        
+                        
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item">
                 <a data-bs-toggle="collapse" href="#dashboardsExamples" class="nav-link {{ Route::currentRouteName() == 'dashboards' ? 'active' : '' }}"
                     aria-controls="dashboardsExamples" role="button" aria-expanded="false">
                     <div class="icon icon-shape icon-sm text-center d-flex align-items-center justify-content-center">

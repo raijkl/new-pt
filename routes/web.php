@@ -93,7 +93,10 @@ Route::group(['middleware' => 'auth'], function () {
     });
 
 
-
+    //Gateway routes
+    Route::get('/pt/gateway/{page}', [PageController::class, 'gateways'])->name('gateways');
+    //ISO routes
+    Route::get('/pt/iso/{page}', [PageController::class, 'isom'])->name('isom');
     //new routes
     Route::get('/pt/partner/{page}', [PageController::class, 'partners'])->name('partners');
 

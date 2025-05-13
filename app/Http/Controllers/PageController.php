@@ -19,7 +19,22 @@ class PageController extends Controller
 
         return abort(404);
     }
+    public function gateways(string $page)
+    {
+        if (view()->exists("pt.gateway.{$page}")) {
+            return view("pt.gateway.{$page}");
+        }
 
+        return abort(404);
+    }
+    public function isom(string $page)
+    {
+        if (view()->exists("pt.iso.{$page}")) {
+            return view("pt.iso.{$page}");
+        }
+
+        return abort(404);
+    }
 
     public function transactions(string $page)
     {
