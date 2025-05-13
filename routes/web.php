@@ -97,11 +97,18 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/pt/gateway/{page}', [PageController::class, 'gateways'])->name('gateways');
     //ISO routes
     Route::get('/pt/iso/{page}', [PageController::class, 'isom'])->name('isom');
+    Route::get('/partner/accounting', [PageController::class, 'check'])->name('partner.accounting');
+    Route::get('/pt/partner/details', [PageController::class, 'partnerDetails'])->name('partner.details');
     //new routes
     Route::get('/pt/partner/{page}', [PageController::class, 'partners'])->name('partners');
 
+
+ 
     // Transactions route
     Route::get('/pt/transactions/{page}', [PageController::class, 'transactions'])->name('transactions');
+
+    // Reporting routes
+    Route::get('/pt/reporting/{page}', [PageController::class, 'reporting'])->name('reporting');
 
     Route::get('/{page}', [PageController::class, 'dashboards'])->name('dashboards');
 

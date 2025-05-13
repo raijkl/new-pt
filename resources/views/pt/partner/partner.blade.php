@@ -236,8 +236,12 @@
                             <!-- Partner (Email, URL) -->
                             <td>
                                 <div class="d-flex flex-column">
-                                    <span class="text-xs font-weight-bold">partner@example.com</span>
-                                    <a href="https://example.com" class="text-xs text-primary" target="_blank">https://example.com</a>
+                                    <a href="{{ route('partner.details') }}" class="text-xs font-weight-bold">
+                                        partner@example.com
+                                    </a>
+                                    <a href="{{ route('partner.details') }}" class="text-xs text-primary" target="_blank">
+                                        https://example.com
+                                    </a>
                                 </div>
                             </td>
 
@@ -284,12 +288,12 @@
                             <td>
                                 <div class="flex items-center gap-2">
                                     <!-- Edit Button -->
-                                    <a href="{{ route('transactions', ['page' => 'partner-transaction']) }}" class="text-gray-500 hover:text-blue-500 px-2">
+                                    <a href="{{ route('partners', ['page' => 'add']) }}" class="text-gray-500 hover:text-blue-500 px-2">
                                         <i class="ti ti-pencil text-lg"></i>
                                     </a>
 
                                     <!-- Transaction Report Button -->
-                                    <a href="#" class="text-gray-500 hover:text-green-500 px-2">
+                                    <a href="{{ route('transactions', ['page' => 'partner-transaction']) }}" class="text-gray-500 hover:text-green-500 px-2">
                                         <i class="ti ti-file-text text-lg"></i>
                                     </a>
 

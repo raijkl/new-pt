@@ -149,7 +149,6 @@
                             <!-- Calendar Range Picker -->
                             <div class="d-flex align-items-center ms-2 me-2">
                                 <input id="reportrange" type="text" class="form-control" name="daterange" />
-
                                 <!-- Input Fields -->
                                 <input type="text" class="form-control me-2" placeholder="PG TID" aria-label="PG TID">
                                 <input type="text" class="form-control me-2" placeholder="PG Order ID" aria-label="PG Order ID">
@@ -363,9 +362,6 @@
 
         cb(start, end); // Trigger initial display
     });
-
-
-
 
     const dataTableSearch = new simpleDatatables.DataTable("#datatable-search", {
         searchable: true,

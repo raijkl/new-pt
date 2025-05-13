@@ -4468,7 +4468,7 @@ textarea.form-control-lg {
 }
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-  color: #495057;
+  color: #910505;
   background-color: #fff;
   border-color: #dee2e6 #dee2e6 #fff;
 }
@@ -4487,6 +4487,7 @@ textarea.form-control-lg {
 .nav-pills .show > .nav-link {
   color: #344767;
   background-color: #fff;
+  
 }
 
 .nav-fill > .nav-link,
@@ -29538,6 +29539,10 @@ Docs & License: https://fullcalendar.io/
 Simple-DataTables
 Github: https://github.com/fiduswriter/Simple-DataTables
 */
+
+.dataTable-container{
+        overflow-x: auto; 
+}
 .dataTable-wrapper.no-header .dataTable-container {
   border-top: 1px solid #d9d9d9;
 }
@@ -34635,4 +34640,14 @@ svg.leaflet-image-layer.leaflet-interactive path {
   transition-timing-function: linear;
   transition-delay: 0s;
   transform: scale(1);
+}
+
+/* PT custom css */
+
+.custom-card {
+    box-shadow: 0 0 1rem 0 rgb(136 152 170 / 50%);
+}
+
+.custom-card .card-body { 
+    padding: 1rem;
 }

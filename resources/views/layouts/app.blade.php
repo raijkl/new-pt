@@ -31,6 +31,12 @@
         content="https://s3.amazonaws.com/creativetim_bucket/products/146/original/argon-dashboard-pro-laravel.jpg" />
     <meta property="og:description" content="Premium Admin Dashboard for Laravel with Ready to Use CRUDs" />
     @endif
+
+
+    <!-- DateRangePicker CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
@@ -46,11 +52,6 @@
     <!-- CSS Files -->
     <link id="pagestyle" href="/assets/css/argon-dashboard.css" rel="stylesheet" />
 
- 
-    <!-- DataTables CSS -->
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
-    <!-- DateRangePicker CSS -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
     @stack('css')
 
@@ -94,9 +95,6 @@
     <!--   Core JS Files   -->
     @stack('js')
 
-
-
-
     <script src="/assets/js/core/popper.min.js"></script>
     <script src="/assets/js/core/bootstrap.min.js"></script>
     {{-- <script src="/assets/js/core/bootstrap.bundle.min.js"></script> --}}
@@ -116,6 +114,9 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
     <script src="/assets/js/argon-dashboard.js"></script>
+ 
+
+
 </body>
 
 </html>

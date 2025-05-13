@@ -4,7 +4,7 @@
 <nav class="navbar navbar-main navbar-expand-lg  px-0 mx-4 shadow-none border-radius-xl z-index-sticky " id="navbarBlur"
     data-scroll="false">
     <div class="container-fluid py-1 px-3">
-        @include('layouts.navbars.auth.topnav', ['title' => 'Product List'])
+        @include('layouts.navbars.auth.topnav', ['title' => 'Referral'])
         <div class="sidenav-toggler sidenav-toggler-inner d-xl-block d-none ">
             <a href="javascript:;" class="nav-link p-0">
                 <div class="sidenav-toggler-inner">
@@ -49,7 +49,7 @@
                             <a class="dropdown-item border-radius-md" href="javascript:;">
                                 <div class="d-flex py-1">
                                     <div class="my-auto">
-                                        <img src="../../../assets/img/team-2.jpg" class="avatar avatar-sm  me-3 "
+                                        <img src="../../assets/img/team-2.jpg" class="avatar avatar-sm  me-3 "
                                             alt="user image">
                                     </div>
                                     <div class="d-flex flex-column justify-content-center">
@@ -68,7 +68,7 @@
                             <a class="dropdown-item border-radius-md" href="javascript:;">
                                 <div class="d-flex py-1">
                                     <div class="my-auto">
-                                        <img src="../../../assets/img/small-logos/logo-spotify.svg"
+                                        <img src="../../assets/img/small-logos/logo-spotify.svg"
                                             class="avatar avatar-sm bg-gradient-dark  me-3 " alt="logo spotify">
                                     </div>
                                     <div class="d-flex flex-column justify-content-center">
@@ -131,254 +131,132 @@
     <div class="row">
         <div class="col-12">
             <div class="card">
-                <!-- Card header -->
-                <div class="card-header pb-0">
-                    <div class="d-lg-flex">
-                        <div>
-                            <h5 class="mb-0">Manage Partners</h5>
-                            Manage your partner's account here
-                        </div>
-                        <div class="ms-auto my-auto mt-lg-0 mt-4">
-                            <div class="ms-auto my-auto">
-                                <a href="./new-product.html" class="btn bg-gradient-primary btn-sm mb-0"
-                                    target="_blank">+&nbsp; New Partner</a>
-                                <button type="button" class="btn btn-outline-primary btn-sm mb-0" data-bs-toggle="modal"
-                                    data-bs-target="#import">
-                                    Import
-                                </button>
-                                <div class="modal fade" id="import" tabindex="-1" aria-hidden="true">
-                                    <div class="modal-dialog mt-lg-10">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="ModalLabel">Import CSV</h5>
-                                                <i class="fas fa-upload ms-3"></i>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                    aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <p>You can browse your computer for a file.</p>
-                                                <input type="text" placeholder="Browse file..."
-                                                    class="form-control mb-3">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="importCheck" checked="">
-                                                    <label class="custom-control-label" for="importCheck">I accept the
-                                                        terms and conditions</label>
-                                                </div>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn bg-gradient-secondary btn-sm"
-                                                    data-bs-dismiss="modal">Close</button>
-                                                <button type="button"
-                                                    class="btn bg-gradient-primary btn-sm">Upload</button>
-                                            </div>
-                                        </div>
-                                    </div>
+                <div class="card-header p-3">
+                    <h5 class="mb-2">Refund Transaction</h5>
+                    <p class="mb-0"> </p>
+                </div>
+                <div class="d-flex">
+
+                    <!-- Tab Content Area -->
+                    <div class="card col-6">
+                        <div class="card-body">
+                            <!-- Refund Information Section -->
+                            <!-- Refund Information Section -->
+                            <div class="row mt-3">
+                                <div class="col-12 col-sm-6">
+                                    <label>Transaction Number <span class="text-danger">*</span></label>
+                                    <input class="multisteps-form__input form-control" type="text" value="11130704" />
                                 </div>
-                                <button class="btn btn-outline-primary btn-sm export mb-0 mt-sm-0 mt-1" data-type="csv"
-                                    type="button" name="button">Export</button>
+                                <div class="col-12 col-sm-6 mt-3 mt-sm-0">
+                                    <label>Gateway Transaction ID <span class="text-danger">*</span></label>
+                                    <input class="multisteps-form__input form-control" type="text" value="418985" />
+                                </div>
+                                <div class="col-12 col-sm-6 mt-3">
+                                    <label>Refund Amount <span class="text-danger">*</span></label>
+                                    <input class="multisteps-form__input form-control" type="text" value="30.07" />
+                                </div>
+                                <div class="col-12 col-sm-6 mt-3">
+                                    <label>Refund Fees <span class="text-danger">*</span></label>
+                                    <input class="multisteps-form__input form-control" type="text" value="10.00" />
+                                </div>
+                                <div class="col-12 col-sm-6 mt-3">
+                                    <label>Other Fees</label>
+                                    <input class="multisteps-form__input form-control" type="text" value="0" />
+                                </div>
+                                <div class="col-12 col-sm-6 mt-3">
+                                    <label>Refund Date <span class="text-danger">*</span></label>
+                                    <input class="multisteps-form__input form-control" type="date" value="2025-05-13" />
+                                </div>
+                                <div class="col-12 mt-3">
+                                    <label>Refund Note <span class="text-danger">*</span></label>
+                                    <textarea class="form-control" rows="3" placeholder="Enter refund note here..."></textarea>
+                                </div>
+
+                                <!-- Refund Button -->
+                                <div class="col-12 mt-4 d-flex justify-content-end">
+                                    <button type="button" class="btn btn-danger">Refund</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                    <div class="card col-6">
+                        <!-- Refund Information Section -->
 
-                <div class="card mt-3 bg-dark" style="border-radius: 0;">
-                    <div class="row">
-                        <div class="col-12">
-                            <!-- Input Fields -->
-                            <div class="d-flex align-items-center ms-2 me-2">
-                                <input type="text" class="form-control me-2" placeholder="Email" aria-label="Email">
-                                <input type="text" class="form-control me-2" placeholder="First Name" aria-label="First Name">
-                                <input type="text" class="form-control me-2" placeholder="Last Name" aria-label="Last Name">
-                                <input type="text" class="form-control me-2" placeholder="Phone No" aria-label="Phone No">
-                                <input type="text" class="form-control me-2" placeholder="Business Name" aria-label="Business Name">
-                                <input type="text" class="form-control me-2" placeholder="Company Name" aria-label="Company Name">
-                                <input type="text" class="form-control me-2" placeholder="Domain" aria-label="Domain">
-                                <input type="text" class="form-control me-2" placeholder="Authentication Id" aria-label="Authentication Id">
-                                <input type="password" class="form-control me-2" placeholder="Authentication PW" aria-label="Authentication PW">
-
-                                <!-- Dropdown for "any trx capability status" -->
-                                <select class="form-select form-control me-2" aria-label="trx capability status">
-                                    <option selected>Any trx capability status</option>
-                                    <option value="active">Active</option>
-                                    <option value="inactive">Inactive</option>
-                                </select>
-
-                                <!-- Dropdown for "any login status" -->
-                                <select class="form-select form-control me-2" aria-label="login status">
-                                    <option selected>Login status</option>
-                                    <option value="active">Active</option>
-                                    <option value="inactive">Inactive</option>
-                                </select>
-
-                                <!-- Search Button -->
-                                <button class="btn btn-primary ms-auto mt-3" type="button">SEARCH</button>
-                            </div>
+                        <div class="card-header ">
+                            <h5 class="mb-0 ">Transaction Information</h5>
                         </div>
+                        <div class="card-body">
+                            <dl class="row">
+
+                                <dt class="col-sm-3"><strong>Transaction</strong></dt>
+                                <dd class="col-sm-3">11130704</dd>
+
+                                <dt class="col-sm-3"><strong>Partner</strong></dt>
+                                <dd class="col-sm-3">reddogcasino.com</dd>
+
+                                <dt class="col-sm-3"><strong>Trn Fees</strong></dt>
+                                <dd class="col-sm-3">USD 0.65</dd>
+
+                                <dt class="col-sm-3"><strong>PG Order ID</strong></dt>
+                                <dd class="col-sm-3">368182f949376a</dd>
+
+                                <dt class="col-sm-3"><strong>Trn Amount</strong></dt>
+                                <dd class="col-sm-3">USD 30.07</dd>
+
+                                <dt class="col-sm-3"><strong>Refund Fees</strong></dt>
+                                <dd class="col-sm-3">USD 10.00</dd>
+
+                                <dt class="col-sm-3"><strong>Gateway Name</strong></dt>
+                                <dd class="col-sm-3">Global-2D</dd>
+
+                                <dt class="col-sm-3"><strong>Gateway TID</strong></dt>
+                                <dd class="col-sm-3">418985</dd>
+
+                                <dt class="col-sm-3"><strong>Rolling Reserve</strong></dt>
+                                <dd class="col-sm-3">USD 3.01</dd>
+
+                                <dt class="col-sm-3"><strong>MDR</strong></dt>
+                                <dd class="col-sm-3">USD 3.01</dd>
+
+                                <dt class="col-sm-3"><strong>CC Last 4</strong></dt>
+                                <dd class="col-sm-3">3444</dd>
+
+                                <dt class="col-sm-3"><strong>Trn Date Time</strong></dt>
+                                <dd class="col-sm-3">5 May 2025 03:25am</dd>
+
+                            </dl>
+                        </div>
+
+
                     </div>
                 </div>
-                <table class="table table-flush" id="datatable-search">
-                    <thead class="thead-light">
-                        <tr>
-                            <th>Partner</th>
-                            <th>ISO</th>
-                            <th>Sub ISO</th>
-                            <th>Currency</th>
-                            <th>Gateways</th>
-                            <th>Transaction Capabilities</th>
-                            <th>Login Status</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <!-- Partner (Email, URL) -->
-                            <td>
-                                <div class="d-flex flex-column">
-                                    <span class="text-xs font-weight-bold">partner@example.com</span>
-                                    <a href="https://example.com" class="text-xs text-primary" target="_blank">https://example.com</a>
-                                </div>
-                            </td>
-
-                            <!-- ISO -->
-                            <td>
-                                <span class="text-xs font-weight-bold text-uppercase">ISO </span>
-                            </td>
-
-                            <!-- Sub ISO -->
-                            <td>
-                                <span class="text-xs font-weight-bold">Sub ISO</span>
-                            </td>
-
-                            <!-- Currency -->
-                            <td>
-                                <span class="text-xs font-weight-bold">USD</span>
-                            </td>
-
-                            <!-- Gateways -->
-                            <td>
-                                <span class="text-xs font-weight-bold">Gateway Name, Gateway Name </span>
-                            </td>
-                            <!-- Transaction Capabilities -->
-                            <td>
-                                <div class="form-check form-switch d-flex align-items-center">
-                                    <input class="form-check-input" type="checkbox" id="transactionToggleActive" checked>
-                                    <label class="form-check-label ms-2" for="transactionToggleActive">
-                                        <span id="transactionStatus">Active</span>
-                                    </label>
-                                </div>
-                            </td>
-
-                            <!-- Login Status -->
-                            <td>
-                                <div class="form-check form-switch d-flex align-items-center">
-                                    <input class="form-check-input" type="checkbox" id="loginToggleInactive">
-                                    <label class="form-check-label ms-2" for="loginToggleInactive">
-                                        <span id="loginStatus">Inactive</span>
-                                    </label>
-                                </div>
-                            </td>
-
-                            <!-- Action -->
-                            <td>
-                                <div class="flex items-center gap-2">
-                                    <!-- Edit Button -->
-                                    <a href="#" class="text-gray-500 hover:text-blue-500 px-2">
-                                        <i class="ti ti-pencil text-lg"></i>
-                                    </a>
-
-                                    <!-- Transaction Report Button -->
-                                    <a href="#" class="text-gray-500 hover:text-green-500 px-2">
-                                        <i class="ti ti-file-text text-lg"></i>
-                                    </a>
-
-                                    <!-- Act As Button -->
-                                    <a href="#" class="text-gray-500 hover:text-indigo-500 px-2">
-                                        <i class="ti ti-user-circle text-lg"></i>
-                                    </a>
-
-                                    <!-- Payout Report Button -->
-                                    <a href="#" class="text-gray-500 hover:text-yellow-500 px-2">
-                                        <i class="ti ti-currency-dollar text-lg"></i>
-                                    </a>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
             </div>
+            @include('layouts.footers.auth.footer')
         </div>
-    </div>
-    @include('layouts.footers.auth.footer')
-</div>
-@endsection
-
-<style>
-    /* Green text for Active */
-    .text-active {
-        color: green;
-    }
-
-    /* Red text for Inactive */
-    .text-inactive {
-        color: red;
-    }
-</style>
-
-@push('js')
-<script src="/assets/js/plugins/datatables.js"></script>
-<script>
-    const dataTableSearch = new simpleDatatables.DataTable("#datatable-search", {
-        searchable: true,
-        fixedHeight: false,
-        perPageSelect: false
-    });
-
-    document.querySelectorAll(".export").forEach(function(el) {
-        el.addEventListener("click", function(e) {
-            var type = el.dataset.type;
-
-            var data = {
-                type: type,
-                filename: "soft-ui-" + type,
-            };
-
-            if (type === "csv") {
-                data.columnDelimiter = "|";
+        @endsection
+        <style>
+            .d-flex-between {
+                display: flex;
+                gap: 15px;
+                flex-wrap: wrap;
             }
 
-            dataTableSearch.export(data);
-        });
-    });
-    document.addEventListener('DOMContentLoaded', function() {
-        // Function to update status text and color
-        function updateStatus(toggleElement, statusElement) {
-            if (toggleElement.checked) {
-                statusElement.textContent = 'Active';
-                statusElement.classList.remove('text-inactive');
-                statusElement.classList.add('text-active');
-            } else {
-                statusElement.textContent = 'Inactive';
-                statusElement.classList.remove('text-active');
-                statusElement.classList.add('text-inactive');
+            .nav-link>div {
+                font-weight: 600;
             }
-        }
 
-        // Transaction Toggle
-        const transactionToggle = document.getElementById('transactionToggleActive');
-        const transactionStatus = document.getElementById('transactionStatus');
-        updateStatus(transactionToggle, transactionStatus); // Initialize on page load
-        transactionToggle.addEventListener('change', function() {
-            updateStatus(transactionToggle, transactionStatus);
-        });
+            .nav-link small {
+                font-size: 0.8em;
+            }
 
-        // Login Toggle
-        const loginToggle = document.getElementById('loginToggleInactive');
-        const loginStatus = document.getElementById('loginStatus');
-        updateStatus(loginToggle, loginStatus); // Initialize on page load
-        loginToggle.addEventListener('change', function() {
-            updateStatus(loginToggle, loginStatus);
-        });
-    });
-</script>
-@endpush
+            #dateTabs .nav-link {
+                height: 4rem;
+                width: auto;
+            }
+        </style>
+        @push('js')
+        <script src="../../assets/js/plugins/countup.min.js"></script>
+        <script>
+
+        </script>
+        @endpush

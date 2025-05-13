@@ -149,7 +149,6 @@
                             <!-- Calendar Range Picker -->
                             <div class="d-flex align-items-center ms-2 me-2">
                                 <input id="reportrange" type="text" class="form-control" name="daterange" />
-
                                 <!-- Input Fields -->
                                 <input type="text" class="form-control me-2" placeholder="PG TID" aria-label="PG TID">
                                 <input type="text" class="form-control me-2" placeholder="PG Order ID" aria-label="PG Order ID">
@@ -198,24 +197,77 @@
                 <table class="table table-flush" id="datatable-search">
                     <thead class="thead-light">
                         <tr>
-                            <th>Date Time</th>
+                            <th>Date of Order</th>
                             <th>PG TID</th>
                             <th>PG Order ID</th>
-                            <th>Partner TID</th>
-                            <th>Gateway TID</th>
-                            <th>Gateway</th>
-                            <th>Partner</th>
-                            <th>BIN</th>
-                            <th>Currency</th>
                             <th>Trx Type</th>
                             <th>Amount</th>
+                            <th>URL</th>
+                            <th>Country</th>
                             <th>Status</th>
-                            <th>Card Level</th>
-                            <th>AcuityTec</th>
-                            <th>Action</th>
+                            <th>Partner Name</th>
+                            <th>Customer Email</th>
+                            <th>Gateway Name</th>
+                            <th>Failed Message Response</th>
+                            <th>Refund Date</th>
+                            <th>Refund Amount</th>
+                            <th>Refund Fees</th>
+                            <th>Total Refund</th>
+                            <th>Chargeback Date</th>
+                            <th>Chargeback Amount</th>
+                            <th>Chargeback Fees</th>
+                            <th>Total Chargeback</th>
                         </tr>
                     </thead>
                     <tbody>
+                        <tr>
+                            <td>10 Apr 2025 06:36pm</td>
+                            <td>11130435</td>
+                            <td>367f80fa369e88</td>
+                            <td>Card</td>
+                            <td>USD 992.00</td>
+                            <td>jakecommerce.com</td>
+                            <td>US</td>
+                            <td>Failed</td>
+                            <td>JakeCommerce</td>
+                            <td>upimedicalssupply@gmail.com</td>
+                            <td>Global-USD</td>
+                            <td>- errorCode: - code: - authCode:</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>09 Apr 2025 06:11pm</td>
+                            <td>11130434</td>
+                            <td>367f6b8677388b</td>
+                            <td>Card</td>
+                            <td>USD 50.09</td>
+                            <td>
+                                <a href="{{ route('partners', ['page' => 'partner-details']) }}" style="color: blue;">
+                                    reddogcasino.com
+                                </a>
+                            </td>
+                            <td>US</td>
+                            <td>Error</td>
+                            <td>Abarth Solutions OU</td>
+                            <td>abronjoe@hotmail.com</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
                         <tr>
                             <td>07 Apr 2025 06:05am</td>
                             <td>
@@ -224,81 +276,27 @@
                                 </a>
                             </td>
                             <td>367f36b23eb0b8</td>
-                            <td>13778811</td>
-                            <td>416268</td>
-                            <td>Global-2D</td>
+                            <td>Card</td>
+                            <td>USD 100.05</td>
                             <td>
                                 <a href="{{ route('partners', ['page' => 'partner-details']) }}" style="color: blue;">
                                     reddogcasino.com
                                 </a>
                             </td>
-                            <td>418656</td>
-                            <td>USD</td>
-                            <td>Card</td>
-                            <td>100.05</td>
+                            <td>US</td>
                             <td>Success</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>
-                                <div class="d-flex gap-2">
-                                    <!-- Refund Button -->
-                                    <button type="button"
-                                        class="btn btn-success mb-0"
-                                        onclick="window.open('{{ route('transactions', ['page' => 'refund-entry-transaction']) }}', '_blank')">
-                                        Refund
-                                    </button>
-
-                                    <!-- Chargeback Button -->
-                                    <a href="{{ route('transactions', ['page' => 'cb-entry-transaction']) }}"
-                                        class="btn btn-danger mb-0"
-                                        target="_blank"
-                                        rel="noopener">
-                                        Chargeback
-                                    </a>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>10 Apr 2025 06:36pm</td>
-                            <td>11130435</td>
-                            <td>367f80fa369e88</td>
-                            <td>7472</td>
-                            <td></td>
-                            <td>Global-USD</td>
-                            <td>jakecommerce.com</td>
-                            <td>484738</td>
-                            <td>USD</td>
-                            <td>Card</td>
-                            <td>992.00</td>
-                            <td>Failed</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>
-
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>09 Apr 2025 06:11pm</td>
-                            <td>11130434</td>
-                            <td>367f6b8677388b</td>
-                            <td>13786212</td>
+                            <td>Abarth Solutions OU</td>
+                            <td>bwill7882@yahoo.com</td>
+                            <td>Global-2D</td>
                             <td></td>
                             <td></td>
-                            <td>
-                                <a href="{{ route('partners', ['page' => 'partner-details']) }}" style="color: blue;">
-                                    reddogcasino.com
-                                </a>
-                            </td>
-                            <td>448233</td>
-                            <td>USD</td>
-                            <td>Card</td>
-                            <td>50.09</td>
-                            <td>Error</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>
-
-                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                     </tbody>
                 </table>
@@ -363,9 +361,6 @@
 
         cb(start, end); // Trigger initial display
     });
-
-
-
 
     const dataTableSearch = new simpleDatatables.DataTable("#datatable-search", {
         searchable: true,
