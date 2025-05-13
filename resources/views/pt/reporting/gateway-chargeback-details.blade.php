@@ -135,59 +135,18 @@
                 <div class="card-header pb-0">
                     <div class="d-lg-flex">
                         <div>
-                            <h5 class="mb-0">Manage Transactions</h5>
-                            Manage transactions here
+                            <h5 class="mb-0">Gateway Chargeback Details</h5>
+                            Manage Gateway Chargeback Details here
                         </div>
-
                     </div>
                 </div>
-
-
                 <div class="card mt-3 bg-dark" style="border-radius: 0;">
                     <div class="row">
                         <div class="col-12">
                             <!-- Calendar Range Picker -->
-                            <div class="d-flex align-items-center ms-2 me-2">
+                            <div class="d-flex align-items-center ms-2 me-2 col-3">
                                 <input id="reportrange" type="text" class="form-control" name="daterange" />
 
-                                <!-- Input Fields -->
-                                <input type="text" class="form-control me-2" placeholder="PG TID" aria-label="PG TID">
-                                <input type="text" class="form-control me-2" placeholder="PG Order ID" aria-label="PG Order ID">
-                                <input type="text" class="form-control me-2" placeholder="Partner TID" aria-label="Partner TID">
-                                <input type="text" class="form-control me-2" placeholder="Gateway TID" aria-label="Gateway TID">
-
-                                <!-- Dropdowns -->
-                                <select class="form-select form-control me-2" aria-label="Select Partner">
-                                    <option selected>Select Partner</option>
-                                    <option value="partner1">Partner 1</option>
-                                    <option value="partner2">Partner 2</option>
-                                </select>
-
-                                <select class="form-select form-control me-2" aria-label="Select Status">
-                                    <option selected>Select Status</option>
-                                    <option value="success">Success</option>
-                                    <option value="failed">Failed</option>
-                                    <option value="error">Error</option>
-                                </select>
-
-                                <select class="form-select form-control me-2" aria-label="Currency">
-                                    <option selected>Currency</option>
-                                    <option value="usd">USD</option>
-                                    <option value="eur">EUR</option>
-                                    <option value="gbp">GBP</option>
-                                    <option value="cad">CAD</option>
-                                    <option value="jpy">JPY</option>
-                                    <option value="aud">AUD</option>
-                                    <option value="zar">ZAR</option>
-                                    <option value="brl">BRL</option>
-                                    <option value="inr">INR</option>
-                                </select>
-
-                                <select class="form-select form-control me-2" aria-label="Transaction Type">
-                                    <option selected>Transaction Type</option>
-                                    <option value="card">Card</option>
-                                    <option value="crypto">Crypto</option>
-                                </select>
 
                                 <!-- Search Button -->
                                 <button class="btn btn-primary ms-auto mt-3" type="button">SEARCH</button>
@@ -198,107 +157,83 @@
                 <table class="table table-flush" id="datatable-search">
                     <thead class="thead-light">
                         <tr>
-                            <th>Date Time</th>
-                            <th>PG TID</th>
-                            <th>PG Order ID</th>
-                            <th>Partner TID</th>
-                            <th>Gateway TID</th>
                             <th>Gateway</th>
-                            <th>Partner</th>
-                            <th>BIN</th>
-                            <th>Currency</th>
-                            <th>Trx Type</th>
-                            <th>Amount</th>
-                            <th>Status</th>
-                            <th>Card Level</th>
-                            <th>AcuityTec</th>
-                            <th>Action</th>
+                            <th>Card</th>
+                            <th>CB Count</th>
+                            <th>Total CB</th>
+                            <th>Trx Count</th>
+                            <th>Trx Amount</th>
+                            <th>CB Count %</th>
+                            <th>CB Volume %</th>
                         </tr>
                     </thead>
                     <tbody>
+                        <!-- DBS-Pagirl-USD - VISA -->
                         <tr>
-                            <td>07 Apr 2025 06:05am</td>
-                            <td>
-                                <a href="{{ route('transactions', ['page' => 'transaction-details']) }}" style="color: blue;">
-                                    11130392
-                                </a>
-                            </td>
-                            <td>367f36b23eb0b8</td>
-                            <td>13778811</td>
-                            <td>416268</td>
-                            <td>Global-2D</td>
-                            <td>
-                                <a href="{{ route('partners', ['page' => 'partner-details']) }}" style="color: blue;">
-                                    reddogcasino.com
-                                </a>
-                            </td>
-                            <td>418656</td>
-                            <td>USD</td>
-                            <td>Card</td>
-                            <td>100.05</td>
-                            <td>Success</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>
-                                <div class="d-flex gap-2">
-                                    <!-- Refund Button -->
-                                    <button type="button"
-                                        class="btn btn-success mb-0"
-                                        onclick="window.open('{{ route('transactions', ['page' => 'refund-entry-transaction']) }}', '_blank')">
-                                        Refund
-                                    </button>
-
-                                    <!-- Chargeback Button -->
-                                    <a href="{{ route('transactions', ['page' => 'cb-entry-transaction']) }}"
-                                        class="btn btn-danger mb-0"
-                                        target="_blank"
-                                        rel="noopener">
-                                        Chargeback
-                                    </a>
-                                </div>
-                            </td>
+                            <td rowspan="3">DBS-Pagirl-USD</td>
+                            <td>VISA</td>
+                            <td>458</td>
+                            <td>USD 65,394.01</td>
+                            <td>48819</td>
+                            <td>USD 2,888,952.98</td>
+                            <td>0.94%</td>
+                            <td>2.26%</td>
                         </tr>
-                        <tr>
-                            <td>10 Apr 2025 06:36pm</td>
-                            <td>11130435</td>
-                            <td>367f80fa369e88</td>
-                            <td>7472</td>
-                            <td></td>
-                            <td>Global-USD</td>
-                            <td>jakecommerce.com</td>
-                            <td>484738</td>
-                            <td>USD</td>
-                            <td>Card</td>
-                            <td>992.00</td>
-                            <td>Failed</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>
 
-                            </td>
+                        <!-- DBS-Pagirl-USD - MASTERCARD -->
+                        <tr>
+                            <td>MASTERCARD</td>
+                            <td>0</td>
+                            <td>USD 0</td>
+                            <td>66</td>
+                            <td>USD 1,897.55</td>
+                            <td>0.00%</td>
+                            <td>0.00%</td>
                         </tr>
-                        <tr>
-                            <td>09 Apr 2025 06:11pm</td>
-                            <td>11130434</td>
-                            <td>367f6b8677388b</td>
-                            <td>13786212</td>
-                            <td></td>
-                            <td></td>
-                            <td>
-                                <a href="{{ route('partners', ['page' => 'partner-details']) }}" style="color: blue;">
-                                    reddogcasino.com
-                                </a>
-                            </td>
-                            <td>448233</td>
-                            <td>USD</td>
-                            <td>Card</td>
-                            <td>50.09</td>
-                            <td>Error</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>
 
-                            </td>
+                        <!-- DBS-Pagirl-USD - Summary -->
+                        <tr>
+                            <td>--</td>
+                            <td>458</td>
+                            <td>USD 65,394.01</td>
+                            <td>48885</td>
+                            <td>USD 2,890,850.53</td>
+                            <td>0.94%</td>
+                            <td>2.26%</td>
+                        </tr>
+
+                        <!-- ECQ Variant 1 - VISA -->
+                        <tr>
+                            <td rowspan="3">ECQ Variant 1</td>
+                            <td>VISA</td>
+                            <td>342</td>
+                            <td>USD 44,394.27</td>
+                            <td>19105</td>
+                            <td>USD 1,175,693.44</td>
+                            <td>1.79%</td>
+                            <td>3.78%</td>
+                        </tr>
+
+                        <!-- ECQ Variant 1 - MASTERCARD -->
+                        <tr>
+                            <td>MASTERCARD</td>
+                            <td>0</td>
+                            <td>USD 0</td>
+                            <td>0</td>
+                            <td>USD 0</td>
+                            <td>0.00%</td>
+                            <td>0.00%</td>
+                        </tr>
+
+                        <!-- ECQ Variant 1 - Summary -->
+                        <tr>
+                            <td>--</td>
+                            <td>342</td>
+                            <td>USD 44,394.27</td>
+                            <td>19105</td>
+                            <td>USD 1,175,693.44</td>
+                            <td>1.79%</td>
+                            <td>3.78%</td>
                         </tr>
                     </tbody>
                 </table>
@@ -363,9 +298,6 @@
 
         cb(start, end); // Trigger initial display
     });
-
-
-
 
     const dataTableSearch = new simpleDatatables.DataTable("#datatable-search", {
         searchable: true,

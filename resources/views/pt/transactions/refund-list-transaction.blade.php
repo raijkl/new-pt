@@ -135,80 +135,42 @@
                 <div class="card-header pb-0">
                     <div class="d-lg-flex">
                         <div>
-                            <h5 class="mb-0">Manage Partners</h5>
-                            Manage your partner's account here
+                            <h5 class="mb-0">Transaction Refunds</h5>
+                            Manage refunds transactions here
                         </div>
-                        <div class="ms-auto my-auto mt-lg-0 mt-4">
-                            <div class="ms-auto my-auto">
-                                <a href="./new-product.html" class="btn bg-gradient-primary btn-sm mb-0"
-                                    target="_blank">+&nbsp; New Partner</a>
-                                <button type="button" class="btn btn-outline-primary btn-sm mb-0" data-bs-toggle="modal"
-                                    data-bs-target="#import">
-                                    Import
-                                </button>
-                                <div class="modal fade" id="import" tabindex="-1" aria-hidden="true">
-                                    <div class="modal-dialog mt-lg-10">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="ModalLabel">Import CSV</h5>
-                                                <i class="fas fa-upload ms-3"></i>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                    aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <p>You can browse your computer for a file.</p>
-                                                <input type="text" placeholder="Browse file..."
-                                                    class="form-control mb-3">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="importCheck" checked="">
-                                                    <label class="custom-control-label" for="importCheck">I accept the
-                                                        terms and conditions</label>
-                                                </div>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn bg-gradient-secondary btn-sm"
-                                                    data-bs-dismiss="modal">Close</button>
-                                                <button type="button"
-                                                    class="btn bg-gradient-primary btn-sm">Upload</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <button class="btn btn-outline-primary btn-sm export mb-0 mt-sm-0 mt-1" data-type="csv"
-                                    type="button" name="button">Export</button>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
-
                 <div class="card mt-3 bg-dark" style="border-radius: 0;">
                     <div class="row">
                         <div class="col-12">
-                            <!-- Input Fields -->
+                            <!-- Calendar Range Picker -->
                             <div class="d-flex align-items-center ms-2 me-2">
-                                <input type="text" class="form-control me-2" placeholder="Email" aria-label="Email">
-                                <input type="text" class="form-control me-2" placeholder="First Name" aria-label="First Name">
-                                <input type="text" class="form-control me-2" placeholder="Last Name" aria-label="Last Name">
-                                <input type="text" class="form-control me-2" placeholder="Phone No" aria-label="Phone No">
-                                <input type="text" class="form-control me-2" placeholder="Business Name" aria-label="Business Name">
-                                <input type="text" class="form-control me-2" placeholder="Company Name" aria-label="Company Name">
-                                <input type="text" class="form-control me-2" placeholder="Domain" aria-label="Domain">
-                                <input type="text" class="form-control me-2" placeholder="Authentication Id" aria-label="Authentication Id">
-                                <input type="password" class="form-control me-2" placeholder="Authentication PW" aria-label="Authentication PW">
-
-                                <!-- Dropdown for "any trx capability status" -->
-                                <select class="form-select form-control me-2" aria-label="trx capability status">
-                                    <option selected>Any trx capability status</option>
-                                    <option value="active">Active</option>
-                                    <option value="inactive">Inactive</option>
+                                <input id="reportrange" type="text" class="form-control" name="daterange" />
+                                <!-- Updated Input Fields -->
+                                <select class="form-select form-control me-2" aria-label="Select Partner">
+                                    <option selected>Select Partner</option>
+                                    <option value="partner1">Partner 1</option>
+                                    <option value="partner2">Partner 2</option>
                                 </select>
 
-                                <!-- Dropdown for "any login status" -->
-                                <select class="form-select form-control me-2" aria-label="login status">
-                                    <option selected>Login status</option>
-                                    <option value="active">Active</option>
-                                    <option value="inactive">Inactive</option>
+                                <select class="form-select form-control me-2" aria-label="Select ISO">
+                                    <option selected>Select ISO</option>
+                                    <option value="iso1">ISO 1</option>
+                                    <option value="iso2">ISO 2</option>
+                                </select>
+
+                                <select class="form-select form-control me-2" aria-label="Currency">
+                                    <option selected>Currency</option>
+                                    <option value="usd">USD</option>
+                                    <option value="eur">EUR</option>
+                                    <option value="gbp">GBP</option>
+                                    <option value="cad">CAD</option>
+                                    <option value="jpy">JPY</option>
+                                    <option value="aud">AUD</option>
+                                    <option value="zar">ZAR</option>
+                                    <option value="brl">BRL</option>
+                                    <option value="inr">INR</option>
                                 </select>
 
                                 <!-- Search Button -->
@@ -217,92 +179,55 @@
                         </div>
                     </div>
                 </div>
+
                 <table class="table table-flush" id="datatable-search">
                     <thead class="thead-light">
                         <tr>
+                            <th>Date Time</th>
+                            <th>Trx. ID</th>
+                            <th>Gateway</th>
                             <th>Partner</th>
                             <th>ISO</th>
-                            <th>Sub ISO</th>
                             <th>Currency</th>
-                            <th>Gateways</th>
-                            <th>Transaction Capabilities</th>
-                            <th>Login Status</th>
-                            <th>Action</th>
+                            <th>Trx. Amount</th>
+                            <th>Refund Amount</th>
+                            <th>Refund Fees</th>
+                            <th>Other Fees</th>
+                            <th>Refund By</th>
+                            <th>Remarks</th>
+                            <th>Refund Total</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <!-- Partner (Email, URL) -->
-                            <td>
-                                <div class="d-flex flex-column">
-                                    <span class="text-xs font-weight-bold">partner@example.com</span>
-                                    <a href="https://example.com" class="text-xs text-primary" target="_blank">https://example.com</a>
-                                </div>
-                            </td>
-
-                            <!-- ISO -->
-                            <td>
-                                <span class="text-xs font-weight-bold text-uppercase">ISO </span>
-                            </td>
-
-                            <!-- Sub ISO -->
-                            <td>
-                                <span class="text-xs font-weight-bold">Sub ISO</span>
-                            </td>
-
-                            <!-- Currency -->
-                            <td>
-                                <span class="text-xs font-weight-bold">USD</span>
-                            </td>
-
-                            <!-- Gateways -->
-                            <td>
-                                <span class="text-xs font-weight-bold">Gateway Name, Gateway Name </span>
-                            </td>
-                            <!-- Transaction Capabilities -->
-                            <td>
-                                <div class="form-check form-switch d-flex align-items-center">
-                                    <input class="form-check-input" type="checkbox" id="transactionToggleActive" checked>
-                                    <label class="form-check-label ms-2" for="transactionToggleActive">
-                                        <span id="transactionStatus">Active</span>
-                                    </label>
-                                </div>
-                            </td>
-
-                            <!-- Login Status -->
-                            <td>
-                                <div class="form-check form-switch d-flex align-items-center">
-                                    <input class="form-check-input" type="checkbox" id="loginToggleInactive">
-                                    <label class="form-check-label ms-2" for="loginToggleInactive">
-                                        <span id="loginStatus">Inactive</span>
-                                    </label>
-                                </div>
-                            </td>
-
-                            <!-- Action -->
-                            <td>
-                                <div class="flex items-center gap-2">
-                                    <!-- Edit Button -->
-                                    <a href="#" class="text-gray-500 hover:text-blue-500 px-2">
-                                        <i class="ti ti-pencil text-lg"></i>
-                                    </a>
-
-                                    <!-- Transaction Report Button -->
-                                    <a href="#" class="text-gray-500 hover:text-green-500 px-2">
-                                        <i class="ti ti-file-text text-lg"></i>
-                                    </a>
-
-                                    <!-- Act As Button -->
-                                    <a href="#" class="text-gray-500 hover:text-indigo-500 px-2">
-                                        <i class="ti ti-user-circle text-lg"></i>
-                                    </a>
-
-                                    <!-- Payout Report Button -->
-                                    <a href="#" class="text-gray-500 hover:text-yellow-500 px-2">
-                                        <i class="ti ti-currency-dollar text-lg"></i>
-                                    </a>
-                                </div>
-                            </td>
+                            <td>17 Mar 2025 04:45pm</td>
+                            <td>11129112</td>
+                            <td>Global-USD</td>
+                            <td>jakecommerce.com</td>
+                            <td>CNBS</td>
+                            <td>USD</td>
+                            <td>13.13</td>
+                            <td>13.13</td>
+                            <td>20.00</td>
+                            <td>0.00</td>
+                            <td>Ericka Smith</td>
+                            <td>Per Customer Request</td>
+                            <td>33.13</td>
+                        </tr>
+                        <tr>
+                            <td>17 Mar 2025 12:56pm</td>
+                            <td>11129096</td>
+                            <td>Global-USD</td>
+                            <td>jakecommerce.com</td>
+                            <td>CNBS</td>
+                            <td>USD</td>
+                            <td>10.00</td>
+                            <td>10.00</td>
+                            <td>20.00</td>
+                            <td>0.00</td>
+                            <td>Jan Ferson Phylippe Gonzales</td>
+                            <td>Per Customer Request</td>
+                            <td>30.00</td>
                         </tr>
                     </tbody>
                 </table>
@@ -323,17 +248,55 @@
     .text-inactive {
         color: red;
     }
+
+    .form-control {
+        margin-right: 0.5rem !important;
+    }
+
+    .daterangepicker {
+        direction: revert;
+    }
 </style>
 
 @push('js')
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 <script src="/assets/js/plugins/datatables.js"></script>
 <script>
-    const dataTableSearch = new simpleDatatables.DataTable("#datatable-search", {
-        searchable: true,
-        fixedHeight: false,
-        perPageSelect: false
+    $(function() {
+
+        var end = moment(); // Today
+        var start = moment().subtract(1, 'month'); // One month ago
+
+        function cb(start, end) {
+            $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+        }
+
+        $('#reportrange').daterangepicker({
+            startDate: start,
+            endDate: end,
+            ranges: {
+                'Today': [moment(), moment()],
+                'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                'This Month': [moment().startOf('month'), moment().endOf('month')],
+                'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+            }
+        }, cb);
+
+        // Set initial input value to "MM/DD/YYYY - MM/DD/YYYY"
+        $('#reportrange').val(start.format('MM/DD/YYYY') + ' - ' + end.format('MM/DD/YYYY'));
+
+        cb(start, end); // Trigger initial display
     });
 
+    const dataTableSearch = new simpleDatatables.DataTable("#datatable-search", {
+        searchable: true,
+        fixedHeight: true
+    });
     document.querySelectorAll(".export").forEach(function(el) {
         el.addEventListener("click", function(e) {
             var type = el.dataset.type;
@@ -380,5 +343,30 @@
             updateStatus(loginToggle, loginStatus);
         });
     });
+
+    document.addEventListener('DOMContentLoaded', () => {
+        // Select all rows in the table body
+        const rows = document.querySelectorAll('#datatable-search tbody tr');
+
+        // Iterate through each row
+        rows.forEach(row => {
+            // Find the "Status" cell (assuming it's the 12th column, index 11)
+            const statusCell = row.cells[11];
+
+            // Get the text content of the status cell and trim whitespace
+            const statusText = statusCell.textContent.trim().toLowerCase();
+
+            // Add appropriate Bootstrap class based on the status value
+            if (statusText === 'success') {
+                statusCell.classList.add('text-success');
+            } else if (statusText === 'failed' || statusText === 'error') {
+                statusCell.classList.add('text-danger');
+            } else if (statusText === 'warning') {
+                statusCell.classList.add('text-warning');
+            }
+        });
+    });
 </script>
+
+
 @endpush

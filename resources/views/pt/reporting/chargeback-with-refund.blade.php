@@ -148,26 +148,25 @@
                         <div class="col-12">
                             <!-- Calendar Range Picker -->
                             <div class="d-flex align-items-center ms-2 me-2">
+                                <!-- Date Range Input -->
+
                                 <input id="reportrange" type="text" class="form-control" name="daterange" />
-
-                                <!-- Input Fields -->
-                                <input type="text" class="form-control me-2" placeholder="PG TID" aria-label="PG TID">
-                                <input type="text" class="form-control me-2" placeholder="PG Order ID" aria-label="PG Order ID">
-                                <input type="text" class="form-control me-2" placeholder="Partner TID" aria-label="Partner TID">
-                                <input type="text" class="form-control me-2" placeholder="Gateway TID" aria-label="Gateway TID">
-
                                 <!-- Dropdowns -->
-                                <select class="form-select form-control me-2" aria-label="Select Partner">
-                                    <option selected>Select Partner</option>
-                                    <option value="partner1">Partner 1</option>
-                                    <option value="partner2">Partner 2</option>
+                                <select class="form-select form-control me-2" aria-label="Gateway">
+                                    <option selected>Select Gateway</option>
+                                    <option value="paypal">PayPal</option>
+                                    <option value="stripe">Stripe</option>
+                                    <option value="authorize">Authorize.net</option>
                                 </select>
 
-                                <select class="form-select form-control me-2" aria-label="Select Status">
-                                    <option selected>Select Status</option>
-                                    <option value="success">Success</option>
-                                    <option value="failed">Failed</option>
-                                    <option value="error">Error</option>
+                                <select class="form-select form-control me-2" aria-label="Card Type">
+                                    <option value="">Select Card</option>
+                                    <option value="visa">VISA</option>
+                                    <option value="mastercard">MASTERCARD</option>
+                                    <option value="discover">DISCOVER</option>
+                                    <option value="amex">AMEX</option>
+                                    <option value="jsb">JSB</option>
+                                    <option value="other">OTHER</option>
                                 </select>
 
                                 <select class="form-select form-control me-2" aria-label="Currency">
@@ -183,122 +182,86 @@
                                     <option value="inr">INR</option>
                                 </select>
 
-                                <select class="form-select form-control me-2" aria-label="Transaction Type">
-                                    <option selected>Transaction Type</option>
-                                    <option value="card">Card</option>
-                                    <option value="crypto">Crypto</option>
-                                </select>
-
                                 <!-- Search Button -->
                                 <button class="btn btn-primary ms-auto mt-3" type="button">SEARCH</button>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="col-12 mt-2 ms-2">
+                    Count: <b>0</b>&nbsp;&nbsp;
+                    Chargeback Amount: <b>0</b>&nbsp;&nbsp;
+                    Refund Amount: <b>0</b>&nbsp;&nbsp;
+
+                </div>
                 <table class="table table-flush" id="datatable-search">
                     <thead class="thead-light">
                         <tr>
-                            <th>Date Time</th>
-                            <th>PG TID</th>
-                            <th>PG Order ID</th>
-                            <th>Partner TID</th>
+                            <th>Trx Date Time</th>
+                            <th>Trx ID</th>
+                            <th>PG OrderID</th>
                             <th>Gateway TID</th>
                             <th>Gateway</th>
-                            <th>Partner</th>
-                            <th>BIN</th>
-                            <th>Currency</th>
-                            <th>Trx Type</th>
-                            <th>Amount</th>
-                            <th>Status</th>
-                            <th>Card Level</th>
-                            <th>AcuityTec</th>
-                            <th>Action</th>
+                            <th>Card</th>
+                            <th>Trx Amt</th>
+                            <th>Ref Date Time</th>
+                            <th>Ref Amt</th>
+                            <th>Ref Total</th>
+                            <th>CB Date Time</th>
+                            <th>CB Amt</th>
+                            <th>CB Total</th>
                         </tr>
                     </thead>
                     <tbody>
+                        <!-- Row 1 -->
                         <tr>
-                            <td>07 Apr 2025 06:05am</td>
-                            <td>
-                                <a href="{{ route('transactions', ['page' => 'transaction-details']) }}" style="color: blue;">
-                                    11130392
-                                </a>
-                            </td>
-                            <td>367f36b23eb0b8</td>
-                            <td>13778811</td>
-                            <td>416268</td>
-                            <td>Global-2D</td>
-                            <td>
-                                <a href="{{ route('partners', ['page' => 'partner-details']) }}" style="color: blue;">
-                                    reddogcasino.com
-                                </a>
-                            </td>
-                            <td>418656</td>
-                            <td>USD</td>
-                            <td>Card</td>
-                            <td>100.05</td>
-                            <td>Success</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>
-                                <div class="d-flex gap-2">
-                                    <!-- Refund Button -->
-                                    <button type="button"
-                                        class="btn btn-success mb-0"
-                                        onclick="window.open('{{ route('transactions', ['page' => 'refund-entry-transaction']) }}', '_blank')">
-                                        Refund
-                                    </button>
-
-                                    <!-- Chargeback Button -->
-                                    <a href="{{ route('transactions', ['page' => 'cb-entry-transaction']) }}"
-                                        class="btn btn-danger mb-0"
-                                        target="_blank"
-                                        rel="noopener">
-                                        Chargeback
-                                    </a>
-                                </div>
-                            </td>
+                            <td>19 May 2023 07:21am</td>
+                            <td>10298632</td>
+                            <td>3646723680fa3d</td>
+                            <td>AUTH_CAP-PIATGJ</td>
+                            <td>DBS-Pagirl-USD</td>
+                            <td>VISA</td>
+                            <td>USD 378.84</td>
+                            <td>14 Jun 2023 11:41am</td>
+                            <td>USD 378.84</td>
+                            <td>USD 381.84</td>
+                            <td>20 Jun 2023 05:38pm</td>
+                            <td>USD 378.84</td>
+                            <td>USD 413.84</td>
                         </tr>
-                        <tr>
-                            <td>10 Apr 2025 06:36pm</td>
-                            <td>11130435</td>
-                            <td>367f80fa369e88</td>
-                            <td>7472</td>
-                            <td></td>
-                            <td>Global-USD</td>
-                            <td>jakecommerce.com</td>
-                            <td>484738</td>
-                            <td>USD</td>
-                            <td>Card</td>
-                            <td>992.00</td>
-                            <td>Failed</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>
 
-                            </td>
+                        <!-- Row 2 -->
+                        <tr>
+                            <td>19 May 2023 05:31am</td>
+                            <td>10298496</td>
+                            <td>3646709bc40b6c</td>
+                            <td>AUTH_CAP-LS5DLU</td>
+                            <td>DBS-Pagirl-USD</td>
+                            <td>VISA</td>
+                            <td>USD 378.61</td>
+                            <td>14 Jun 2023 11:42am</td>
+                            <td>USD 378.61</td>
+                            <td>USD 381.61</td>
+                            <td>20 Jun 2023 05:46pm</td>
+                            <td>USD 378.61</td>
+                            <td>USD 413.61</td>
                         </tr>
-                        <tr>
-                            <td>09 Apr 2025 06:11pm</td>
-                            <td>11130434</td>
-                            <td>367f6b8677388b</td>
-                            <td>13786212</td>
-                            <td></td>
-                            <td></td>
-                            <td>
-                                <a href="{{ route('partners', ['page' => 'partner-details']) }}" style="color: blue;">
-                                    reddogcasino.com
-                                </a>
-                            </td>
-                            <td>448233</td>
-                            <td>USD</td>
-                            <td>Card</td>
-                            <td>50.09</td>
-                            <td>Error</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>
 
-                            </td>
+                        <!-- Row 3 -->
+                        <tr>
+                            <td>18 May 2023 08:47am</td>
+                            <td>10297369</td>
+                            <td>36465e616ebcb0</td>
+                            <td>AUTH_CAP-GY9E9C</td>
+                            <td>DBS-Pagirl-USD</td>
+                            <td>VISA</td>
+                            <td>USD 354.48</td>
+                            <td>14 Jun 2023 11:43am</td>
+                            <td>USD 354.48</td>
+                            <td>USD 357.48</td>
+                            <td>20 Jun 2023 05:37pm</td>
+                            <td>USD 354.48</td>
+                            <td>USD 389.48</td>
                         </tr>
                     </tbody>
                 </table>
@@ -363,9 +326,6 @@
 
         cb(start, end); // Trigger initial display
     });
-
-
-
 
     const dataTableSearch = new simpleDatatables.DataTable("#datatable-search", {
         searchable: true,

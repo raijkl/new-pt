@@ -132,283 +132,262 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header p-3">
-                    <h5 class="mb-2">Analytics</h5>
+                    <h5 class="mb-2">Client Details</h5>
                     <p class="mb-0"> </p>
                 </div>
                 <div class="d-flex">
                     <!-- Vertical Tab Sidebar -->
                     <div class="card col-2">
                         <div class="card-body p-0">
-                            <ul class="nav flex-column nav-pills p-3" id="dateTabs">
-                                <!-- Tabs will be injected here -->
+                            <ul class="nav flex-column nav-pills p-3" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link active" data-bs-toggle="tab" data-bs-target="#basicInfo" role="tab">Basic Info</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" data-bs-toggle="tab" data-bs-target="#integrationDetails" role="tab">Integration Details</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" data-bs-toggle="tab" data-bs-target="#bankInfo" role="tab">Bank Info</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" data-bs-toggle="tab" data-bs-target="#gatewayAssignment" role="tab">Gateway Assignment</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" data-bs-toggle="tab" data-bs-target="#feesInfo" role="tab">Fees Info</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" data-bs-toggle="tab" data-bs-target="#settings" role="tab">Settings</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" data-bs-toggle="tab" data-bs-target="#others" role="tab">Others</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" href="{{ route('partner.accounting') }}" role="tab">Accounting</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
-                    <div class="card col-10">
-                        <div class="card-body p-3">
 
-                            <div class="row align-items-center mb-3">
-                                <div class="col-lg-12 col-sm-12">
-                                    <div class="nav-wrapper position-relative end-0">
-                                        <ul class="nav nav-pills nav-fill p-1" role="tablist">
-                                            <!-- ALL Tab -->
-                                            <li class="nav-item">
-                                                <a class="nav-link mb-0 px-0 py-1 active" data-bs-toggle="tab" role="tab" aria-selected="true">
-                                                    ALL
-                                                </a>
-                                            </li>
-                                            <!-- USD Tab -->
-                                            <li class="nav-item">
-                                                <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" role="tab" aria-selected="false">
-                                                    USD
-                                                </a>
-                                            </li>
-                                            <!-- EUR Tab -->
-                                            <li class="nav-item">
-                                                <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" role="tab" aria-selected="false">
-                                                    EUR
-                                                </a>
-                                            </li>
-                                            <!-- GBP Tab -->
-                                            <li class="nav-item">
-                                                <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" role="tab" aria-selected="false">
-                                                    GBP
-                                                </a>
-                                            </li>
-                                            <!-- CAD Tab -->
-                                            <li class="nav-item">
-                                                <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" role="tab" aria-selected="false">
-                                                    CAD
-                                                </a>
-                                            </li>
-                                            <!-- JPY Tab -->
-                                            <li class="nav-item">
-                                                <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" role="tab" aria-selected="false">
-                                                    JPY
-                                                </a>
-                                            </li>
-                                            <!-- AUD Tab -->
-                                            <li class="nav-item">
-                                                <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" role="tab" aria-selected="false">
-                                                    AUD
-                                                </a>
-                                            </li>
-                                            <!-- ZAR Tab -->
-                                            <li class="nav-item">
-                                                <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" role="tab" aria-selected="false">
-                                                    ZAR
-                                                </a>
-                                            </li>
-                                            <!-- BRL Tab -->
-                                            <li class="nav-item">
-                                                <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" role="tab" aria-selected="false">
-                                                    BRL
-                                                </a>
-                                            </li>
-                                            <!-- INR Tab -->
-                                            <li class="nav-item">
-                                                <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" role="tab" aria-selected="false">
-                                                    INR
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xl-3 col-sm-6 mb-4">
-                                    <a href="{{ route('partners', ['page' => 'partner']) }}"
-                                        class="text-decoration-none"
-                                        target="_blank"
-                                        rel="noopener">
-                                        <div class="card custom-card">
-                                            <div class="card-body text-center">
-                                                <h1 class="text-gradient text-primary"><span id="status1" countto="2">2</span>
-                                                    <h6 class="mb-0 font-weight-bolder">PM Fees Error</h6>
-                                            </div>
-</a>
-                                        </div>
-                                </div>
-                                <div class="col-xl-3 col-sm-6 mb-4">
-                                    <a href="{{ route('transactions', ['page' => 'pending-manual-refund']) }}"
-                                        class="text-decoration-none"
-                                        target="_blank"
-                                        rel="noopener">
-                                        <div class="card custom-card">
-                                            <div class="card-body text-center">
-                                                <h1 class="text-gradient text-primary">
-                                                    <span id="status1" countto="11">11</span>
-                                                </h1>
-                                                <h6 class="mb-0 font-weight-bolder">Pending Manual Refund</h6>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- First Row (4 Columns) -->
-                            <div class="row mb-4">
-                                <div class="col-lg-2 col-6 text-center">
-                                    <div class="border-radius-md ">
-                                        <h2 class="font-weight-bolder"><span id="state1">0.00%</span></h2>
-                                        <h6 class="text-primary mb-0">Overall Approval Ratio by Transaction</h6>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-6 text-center">
-                                    <div class="border-radius-md ">
-                                        <h2 class="font-weight-bolder"><span id="state2">0</span></h2>
-                                        <h6 class="text-primary mb-0">Declined Transactions</h6>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-6 text-center">
-                                    <div class="border-radius-md ">
-                                        <h2 class="font-weight-bolder"><span id="state3">0</span></h2>
-                                        <h6 class="text-primary mb-0">Approved Transactions</h6>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-6 text-center">
-                                    <div class="border-radius-md ">
-                                        <h2 class="font-weight-bolder"><span id="state4">0</span></h2>
-                                        <h6 class="text-primary mb-0">Chargeback Transactions</h6>
-                                    </div>
-                                </div>
-                            </div>
+                    <!-- Tab Content Area -->
+                    <div class="card col-10 mb-5">
+                        <div class="card-body">
+                            <div class="tab-content">
 
-                            <!-- Second Row (4 Columns) -->
-                            <div class="row mb-4">
-                                <div class="col-lg-2 col-6 text-center">
-                                    <div class="border-radius-md ">
-                                        <h2 class="font-weight-bolder"><span id="state5">0.00%</span></h2>
-                                        <h6 class="text-primary mb-0">Overall Approval Ratio by Volume</h6>
-                                    </div>
+                                <!-- Basic Info -->
+                                <div class="tab-pane fade show active" id="basicInfo" role="tabpanel">
+                                    <h5>Basic Info</h5>
+                                    <dl class="row">
+                                        <dt class="col-sm-3">Login Email</dt>
+                                        <dd class="col-sm-9">management@mstreethost.com</dd>
+                                        <dt class="col-sm-3">First Name</dt>
+                                        <dd class="col-sm-9">MStreet</dd>
+                                        <dt class="col-sm-3">Last Name</dt>
+                                        <dd class="col-sm-9">Corporation</dd>
+                                        <dt class="col-sm-3">Phone</dt>
+                                        <dd class="col-sm-9">888-888-8888</dd>
+                                        <dt class="col-sm-3">Country</dt>
+                                        <dd class="col-sm-9">United States</dd>
+                                        <dt class="col-sm-3">Customer Service Email Address</dt>
+                                        <dd class="col-sm-9"></dd>
+                                        <dt class="col-sm-3">Customer Service Telephone</dt>
+                                        <dd class="col-sm-9"></dd>
+                                        <dt class="col-sm-3">Partner/Merchant Application Status</dt>
+                                        <dd class="col-sm-9">Select One</dd>
+                                        <dt class="col-sm-3">Login Status</dt>
+                                        <dd class="col-sm-9">ACTIVE</dd>
+                                        <dt class="col-sm-3">Notes</dt>
+                                        <dd class="col-sm-9">4xT1IWUA0c</dd>
+                                        <dt class="col-sm-3">Partner Doing Business As Name</dt>
+                                        <dd class="col-sm-9">MStreet Corp</dd>
+                                        <dt class="col-sm-3">Partner Legal (Registered) Company Name</dt>
+                                        <dd class="col-sm-9">MStreet Corp</dd>
+                                        <dt class="col-sm-3">Partner Domain</dt>
+                                        <dd class="col-sm-9">mstreethost.com</dd>
+                                        <dt class="col-sm-3">Bank Validated URL</dt>
+                                        <dd class="col-sm-9"></dd>
+                                        <dt class="col-sm-3">PM Type</dt>
+                                        <dd class="col-sm-9">Known</dd>
+                                        <dt class="col-sm-3">Allow Currency</dt>
+                                        <dd class="col-sm-9">USD</dd>
+                                        <dt class="col-sm-3">Crypto Enable</dt>
+                                        <dd class="col-sm-9">NO</dd>
+                                    </dl>
                                 </div>
-                                <div class="col-lg-2 col-6 text-center">
-                                    <div class="border-radius-md ">
-                                        <h2 class="font-weight-bolder"><span id="state6">0.00</span></h2>
-                                        <h6 class="text-primary mb-0">Declined Transactions by Volume</h6>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-6 text-center">
-                                    <div class="border-radius-md ">
-                                        <h2 class="font-weight-bolder"><span id="state7">0.00</span></h2>
-                                        <h6 class="text-primary mb-0">Approved Transactions by Volume</h6>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-6 text-center">
-                                    <div class="border-radius-md ">
-                                        <h2 class="font-weight-bolder"><span id="state8">0.00</span></h2>
-                                        <h6 class="text-primary mb-0">Chargeback Transactions by Volume</h6>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <!-- Third Row (3 Columns + 1 Empty Column) -->
-                            <div class="row mb-4">
-                                <div class="col-lg-2 col-6 text-center">
-                                    <div class="border-radius-md ">
-                                        <h2 class="font-weight-bolder"><span id="state9">0.00%</span></h2>
-                                        <h6 class="text-primary mb-0">Overall Approval Ratio by Transaction (VISA)</h6>
-                                    </div>
+                                <!-- Integration Details -->
+                                <div class="tab-pane fade" id="integrationDetails" role="tabpanel">
+                                    <h5>Integration Details</h5>
+                                    <dl class="row">
+                                        <dt class="col-sm-4">Authenticate ID</dt>
+                                        <dd class="col-sm-8">610b4ec9ff1ad098bf9fbdcd24685171</dd>
+                                        <dt class="col-sm-4">Authenticate PW</dt>
+                                        <dd class="col-sm-8">6140c9ffefe58e4db3eeaa27427d582b</dd>
+                                        <dt class="col-sm-4">Secret Key</dt>
+                                        <dd class="col-sm-8">681a067007fa86.22351358</dd>
+                                        <dt class="col-sm-4">Optional 32 Bit Secret Key*</dt>
+                                        <dd class="col-sm-8">0e49a0bcbaa587995fe8c059864777b8</dd>
+                                        <dt class="col-sm-4">Public Key</dt>
+                                        <dd class="col-sm-8">g045Ek9A</dd>
+                                        <dt class="col-sm-4">ID Verification</dt>
+                                        <dd class="col-sm-8">OFF</dd>
+                                        <dt class="col-sm-4">Allowed Hosted Payment</dt>
+                                        <dd class="col-sm-8">No</dd>
+                                        <dt class="col-sm-4">&nbsp;</dt>
+                                        <dd class="col-sm-8 text-muted"><small>*Certain scripts/languages require a 32-bit key to utilize the "AES-256-CBC" encryption method.</small></dd>
+                                    </dl>
                                 </div>
-                                <div class="col-lg-2 col-6 text-center">
-                                    <div class="border-radius-md ">
-                                        <h2 class="font-weight-bolder"><span id="state10">0</span></h2>
-                                        <h6 class="text-primary mb-0">Declined Transactions (VISA)</h6>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-6 text-center">
-                                    <div class="border-radius-md ">
-                                        <h2 class="font-weight-bolder"><span id="state11">0</span></h2>
-                                        <h6 class="text-primary mb-0">Approved Transactions (VISA)</h6>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-6 text-center">
-                                    <div class="border-radius-md  d-none d-lg-block">
-                                        <!-- Placeholder for empty column -->
-                                    </div>
-                                </div>
-                            </div>
 
-                            <!-- Fourth Row (3 Columns + 1 Empty Column) -->
-                            <div class="row mb-4">
-                                <div class="col-lg-2 col-6 text-center">
-                                    <div class="border-radius-md ">
-                                        <h2 class="font-weight-bolder"><span id="state12">0.00%</span></h2>
-                                        <h6 class="text-primary mb-0">Overall Approval Ratio by Volume (VISA)</h6>
-                                    </div>
+                                <!-- Bank Info -->
+                                <div class="tab-pane fade" id="bankInfo" role="tabpanel">
+                                    <h5>Bank Info</h5>
+                                    <dl class="row">
+                                        <dt class="col-sm-4">Crypto Currency Type</dt>
+                                        <dd class="col-sm-8">Bitcoin</dd>
+                                        <dt class="col-sm-4">Crypto Wallet Address</dt>
+                                        <dd class="col-sm-8">testwallet</dd>
+                                    </dl>
                                 </div>
-                                <div class="col-lg-2 col-6 text-center">
-                                    <div class="border-radius-md ">
-                                        <h2 class="font-weight-bolder"><span id="state13">0.00</span></h2>
-                                        <h6 class="text-primary mb-0">Declined Transactions by Volume (VISA)</h6>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-6 text-center">
-                                    <div class="border-radius-md ">
-                                        <h2 class="font-weight-bolder"><span id="state14">0.00</span></h2>
-                                        <h6 class="text-primary mb-0">Approved Transactions by Volume (VISA)</h6>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-6 text-center">
-                                    <div class="border-radius-md  d-none d-lg-block">
-                                        <!-- Placeholder for empty column -->
-                                    </div>
-                                </div>
-                            </div>
 
-                            <!-- Fifth Row (3 Columns + 1 Empty Column) -->
-                            <div class="row mb-4">
-                                <div class="col-lg-2 col-6 text-center">
-                                    <div class="border-radius-md ">
-                                        <h2 class="font-weight-bolder"><span id="state15">0.00%</span></h2>
-                                        <h6 class="text-primary mb-0">Overall Approval Ratio by Transaction (MC)</h6>
+                                <!-- Gateway Assignment -->
+                                <div class="tab-pane fade" id="gatewayAssignment" role="tabpanel">
+                                    <h5>Gateway Assignment</h5>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered table-sm">
+                                            <thead>
+                                                <tr>
+                                                    <th>Gateway</th>
+                                                    <th>Transaction%</th>
+                                                    <th>Amount</th>
+                                                    <th>Duration (Days)</th>
+                                                    <th>Approve Amount</th>
+                                                    <th>Decline Amount</th>
+                                                    <th>Amt Duration (Days)</th>
+                                                    <th>Approve Trn#</th>
+                                                    <th>Decline Trn#</th>
+                                                    <th>Refund Trn#</th>
+                                                    <th>CB Trn#</th>
+                                                    <th>Trn# Duration (Days)</th>
+                                                    <th>Decline Trn#(%)</th>
+                                                    <th>Refund Trn#(%)</th>
+                                                    <th>CB Trn#(%)</th>
+                                                    <th>(%) Duration</th>
+                                                    <th>Min Trn#</th>
+                                                    <th>Currency</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>GP-USD-MST</td>
+                                                    <td>100</td>
+                                                    <td>100000</td>
+                                                    <td>1</td>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                    <td>USD</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
-                                <div class="col-lg-2 col-6 text-center">
-                                    <div class="border-radius-md ">
-                                        <h2 class="font-weight-bolder"><span id="state16">0</span></h2>
-                                        <h6 class="text-primary mb-0">Declined Transactions (MC)</h6>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-6 text-center">
-                                    <div class="border-radius-md ">
-                                        <h2 class="font-weight-bolder"><span id="state17">0</span></h2>
-                                        <h6 class="text-primary mb-0">Approved Transactions (MC)</h6>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-6 text-center">
-                                    <div class="border-radius-md  d-none d-lg-block">
-                                        <!-- Placeholder for empty column -->
-                                    </div>
-                                </div>
-                            </div>
 
-                            <!-- Sixth Row (3 Columns + 1 Empty Column) -->
-                            <div class="row mb-4">
-                                <div class="col-lg-2 col-6 text-center">
-                                    <div class="border-radius-md ">
-                                        <h2 class="font-weight-bolder"><span id="state18">0.00%</span></h2>
-                                        <h6 class="text-primary mb-0">Overall Approval Ratio by Volume (MC)</h6>
+                                <!-- Fees Info -->
+                                <div class="tab-pane fade" id="feesInfo" role="tabpanel">
+                                    <h5>Fees Info</h5>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered table-sm">
+                                            <thead>
+                                                <tr>
+                                                    <th>Card</th>
+                                                    <th>MDR (%)</th>
+                                                    <th>Processing</th>
+                                                    <th>Decline</th>
+                                                    <th>Refund</th>
+                                                    <th>Chargeback</th>
+                                                    <th>Rolling Reserve (%)</th>
+                                                    <th>Rolling Reserve Duration (Days)</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Visa</td>
+                                                    <td>8</td>
+                                                    <td>0.5</td>
+                                                    <td>0.5</td>
+                                                    <td>15</td>
+                                                    <td>0</td>
+                                                    <td>10</td>
+                                                    <td>180</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Mastercard</td>
+                                                    <td>8</td>
+                                                    <td>0.5</td>
+                                                    <td>0.5</td>
+                                                    <td>15</td>
+                                                    <td>0</td>
+                                                    <td>10</td>
+                                                    <td>180</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
-                                <div class="col-lg-2 col-6 text-center">
-                                    <div class="border-radius-md ">
-                                        <h2 class="font-weight-bolder"><span id="state19">0.00</span></h2>
-                                        <h6 class="text-primary mb-0">Declined Transactions by Volume (MC)</h6>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-6 text-center">
-                                    <div class="border-radius-md ">
-                                        <h2 class="font-weight-bolder"><span id="state20">0.00</span></h2>
-                                        <h6 class="text-primary mb-0">Approved Transactions by Volume (MC)</h6>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-6 text-center">
-                                    <div class="border-radius-md  d-none d-lg-block">
-                                        <!-- Placeholder for empty column -->
-                                    </div>
-                                </div>
-                            </div>
 
+                                <!-- Settings -->
+                                <div class="tab-pane fade" id="settings" role="tabpanel">
+                                    <h5>Settings</h5>
+                                    <dl class="row">
+                                        <dt class="col-sm-4">Payout Condition</dt>
+                                        <dd class="col-sm-8">Every Wednesday</dd>
+                                        <dt class="col-sm-4">Payout Minimum</dt>
+                                        <dd class="col-sm-8">10000</dd>
+                                        <dt class="col-sm-4">Fee Calculation Condition</dt>
+                                        <dd class="col-sm-8">Monthly</dd>
+                                        <dt class="col-sm-4">Virtual Terminal</dt>
+                                        <dd class="col-sm-8">OFF</dd>
+                                        <dt class="col-sm-4">Ignore Velocity Decline</dt>
+                                        <dd class="col-sm-8">No</dd>
+                                        <dt class="col-sm-4">Ignore aVelocity Decline</dt>
+                                        <dd class="col-sm-8">No</dd>
+                                        <dt class="col-sm-4">ID Verification</dt>
+                                        <dd class="col-sm-8">No</dd>
+                                    </dl>
+                                </div>
+
+                                <!-- Others -->
+                                <div class="tab-pane fade" id="others" role="tabpanel">
+                                    <h5>Others</h5>
+                                    <dl class="row">
+                                        <dt class="col-sm-4">Allowed Hosted Payment</dt>
+                                        <dd class="col-sm-8">No</dd>
+                                        <dt class="col-sm-4">Products sold by this business</dt>
+                                        <dd class="col-sm-8"></dd>
+                                        <dt class="col-sm-4">Check BIN for Transaction</dt>
+                                        <dd class="col-sm-8">No</dd>
+                                        <dt class="col-sm-4">Allowed IPs</dt>
+                                        <dd class="col-sm-8"></dd>
+                                        <dt class="col-sm-4">Additional Allowed Domains</dt>
+                                        <dd class="col-sm-8"></dd>
+                                        <dt class="col-sm-4">Do Not Cascade Response Keywords</dt>
+                                        <dd class="col-sm-8"></dd>
+                                        <dt class="col-sm-4">Failed Response Messages to Blacklist</dt>
+                                        <dd class="col-sm-8"></dd>
+                                    </dl>
+                                </div>
+
+
+                            </div>
                         </div>
                     </div>
                 </div>

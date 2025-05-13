@@ -135,26 +135,18 @@
                 <div class="card-header pb-0">
                     <div class="d-lg-flex">
                         <div>
-                            <h5 class="mb-0">Manage Transactions</h5>
-                            Manage transactions here
+                            <h5 class="mb-0">Rolling Reserve Summary</h5>
+
                         </div>
 
                     </div>
                 </div>
-
 
                 <div class="card mt-3 bg-dark" style="border-radius: 0;">
                     <div class="row">
                         <div class="col-12">
                             <!-- Calendar Range Picker -->
                             <div class="d-flex align-items-center ms-2 me-2">
-                                <input id="reportrange" type="text" class="form-control" name="daterange" />
-
-                                <!-- Input Fields -->
-                                <input type="text" class="form-control me-2" placeholder="PG TID" aria-label="PG TID">
-                                <input type="text" class="form-control me-2" placeholder="PG Order ID" aria-label="PG Order ID">
-                                <input type="text" class="form-control me-2" placeholder="Partner TID" aria-label="Partner TID">
-                                <input type="text" class="form-control me-2" placeholder="Gateway TID" aria-label="Gateway TID">
 
                                 <!-- Dropdowns -->
                                 <select class="form-select form-control me-2" aria-label="Select Partner">
@@ -162,13 +154,8 @@
                                     <option value="partner1">Partner 1</option>
                                     <option value="partner2">Partner 2</option>
                                 </select>
-
-                                <select class="form-select form-control me-2" aria-label="Select Status">
-                                    <option selected>Select Status</option>
-                                    <option value="success">Success</option>
-                                    <option value="failed">Failed</option>
-                                    <option value="error">Error</option>
-                                </select>
+                                <!-- Calendar Range Picker -->
+                                <input id="reportrange" type="text" class="form-control" name="daterange" />
 
                                 <select class="form-select form-control me-2" aria-label="Currency">
                                     <option selected>Currency</option>
@@ -183,12 +170,6 @@
                                     <option value="inr">INR</option>
                                 </select>
 
-                                <select class="form-select form-control me-2" aria-label="Transaction Type">
-                                    <option selected>Transaction Type</option>
-                                    <option value="card">Card</option>
-                                    <option value="crypto">Crypto</option>
-                                </select>
-
                                 <!-- Search Button -->
                                 <button class="btn btn-primary ms-auto mt-3" type="button">SEARCH</button>
                             </div>
@@ -198,107 +179,46 @@
                 <table class="table table-flush" id="datatable-search">
                     <thead class="thead-light">
                         <tr>
-                            <th>Date Time</th>
-                            <th>PG TID</th>
-                            <th>PG Order ID</th>
-                            <th>Partner TID</th>
-                            <th>Gateway TID</th>
-                            <th>Gateway</th>
+                            <th>Trn. Date Time</th>
+                            <th>Trn. No.</th>
                             <th>Partner</th>
-                            <th>BIN</th>
                             <th>Currency</th>
-                            <th>Trx Type</th>
-                            <th>Amount</th>
-                            <th>Status</th>
-                            <th>Card Level</th>
-                            <th>AcuityTec</th>
-                            <th>Action</th>
+                            <th>Trn. Amount</th>
+                            <th>Rolling Reserve Amount</th>
+                            <th>Payout Date</th>
+                            <th>Payout Status</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>07 Apr 2025 06:05am</td>
-                            <td>
-                                <a href="{{ route('transactions', ['page' => 'transaction-details']) }}" style="color: blue;">
-                                    11130392
-                                </a>
-                            </td>
-                            <td>367f36b23eb0b8</td>
-                            <td>13778811</td>
-                            <td>416268</td>
-                            <td>Global-2D</td>
-                            <td>
-                                <a href="{{ route('partners', ['page' => 'partner-details']) }}" style="color: blue;">
-                                    reddogcasino.com
-                                </a>
-                            </td>
-                            <td>418656</td>
+                            <td>13 Dec 2021 05:26am</td>
+                            <td>10000006</td>
+                            <td>paymentechnologies.co.uk</td>
                             <td>USD</td>
-                            <td>Card</td>
-                            <td>100.05</td>
-                            <td>Success</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>
-                                <div class="d-flex gap-2">
-                                    <!-- Refund Button -->
-                                    <button type="button"
-                                        class="btn btn-success mb-0"
-                                        onclick="window.open('{{ route('transactions', ['page' => 'refund-entry-transaction']) }}', '_blank')">
-                                        Refund
-                                    </button>
-
-                                    <!-- Chargeback Button -->
-                                    <a href="{{ route('transactions', ['page' => 'cb-entry-transaction']) }}"
-                                        class="btn btn-danger mb-0"
-                                        target="_blank"
-                                        rel="noopener">
-                                        Chargeback
-                                    </a>
-                                </div>
-                            </td>
+                            <td>3.00</td>
+                            <td>0.30</td>
+                            <td>11 Jun 2022</td>
+                            <td>Done</td>
                         </tr>
                         <tr>
-                            <td>10 Apr 2025 06:36pm</td>
-                            <td>11130435</td>
-                            <td>367f80fa369e88</td>
-                            <td>7472</td>
-                            <td></td>
-                            <td>Global-USD</td>
-                            <td>jakecommerce.com</td>
-                            <td>484738</td>
+                            <td>23 Dec 2021 11:51am</td>
+                            <td>10000048</td>
+                            <td>paymentechnologies.co.uk</td>
                             <td>USD</td>
-                            <td>Card</td>
-                            <td>992.00</td>
-                            <td>Failed</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>
-
-                            </td>
+                            <td>1.00</td>
+                            <td>0.10</td>
+                            <td>21 Jun 2022</td>
+                            <td>Done</td>
                         </tr>
                         <tr>
-                            <td>09 Apr 2025 06:11pm</td>
-                            <td>11130434</td>
-                            <td>367f6b8677388b</td>
-                            <td>13786212</td>
-                            <td></td>
-                            <td></td>
-                            <td>
-                                <a href="{{ route('partners', ['page' => 'partner-details']) }}" style="color: blue;">
-                                    reddogcasino.com
-                                </a>
-                            </td>
-                            <td>448233</td>
+                            <td>24 Dec 2021 11:25am</td>
+                            <td>10000060</td>
+                            <td>paymentechnologies.co.uk</td>
                             <td>USD</td>
-                            <td>Card</td>
-                            <td>50.09</td>
-                            <td>Error</td>
-                            <td>--</td>
-                            <td>--</td>
-                            <td>
-
-                            </td>
+                            <td>3.00</td>
+                            <td>0.30</td>
+                            <td>22 Jun 2022</td>
+                            <td>Done</td>
                         </tr>
                     </tbody>
                 </table>
@@ -364,9 +284,6 @@
         cb(start, end); // Trigger initial display
     });
 
-
-
-
     const dataTableSearch = new simpleDatatables.DataTable("#datatable-search", {
         searchable: true,
         fixedHeight: true
@@ -425,13 +342,13 @@
         // Iterate through each row
         rows.forEach(row => {
             // Find the "Status" cell (assuming it's the 12th column, index 11)
-            const statusCell = row.cells[11];
+            const statusCell = row.cells[7];
 
             // Get the text content of the status cell and trim whitespace
             const statusText = statusCell.textContent.trim().toLowerCase();
 
             // Add appropriate Bootstrap class based on the status value
-            if (statusText === 'success') {
+            if (statusText === 'done') {
                 statusCell.classList.add('text-success');
             } else if (statusText === 'failed' || statusText === 'error') {
                 statusCell.classList.add('text-danger');

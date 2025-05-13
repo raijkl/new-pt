@@ -135,8 +135,7 @@
                 <div class="card-header pb-0">
                     <div class="d-lg-flex">
                         <div>
-                            <h5 class="mb-0">Manage Transactions</h5>
-                            Manage transactions here
+                            <h5 class="mb-0">Partner Credit Account</h5> 
                         </div>
 
                     </div>
@@ -148,26 +147,16 @@
                         <div class="col-12">
                             <!-- Calendar Range Picker -->
                             <div class="d-flex align-items-center ms-2 me-2">
+                                <!-- Date Range Input -->
                                 <input id="reportrange" type="text" class="form-control" name="daterange" />
 
-                                <!-- Input Fields -->
-                                <input type="text" class="form-control me-2" placeholder="PG TID" aria-label="PG TID">
-                                <input type="text" class="form-control me-2" placeholder="PG Order ID" aria-label="PG Order ID">
-                                <input type="text" class="form-control me-2" placeholder="Partner TID" aria-label="Partner TID">
-                                <input type="text" class="form-control me-2" placeholder="Gateway TID" aria-label="Gateway TID">
-
                                 <!-- Dropdowns -->
-                                <select class="form-select form-control me-2" aria-label="Select Partner">
+                                <select class="form-select form-control me-2" aria-label="Partner">
                                     <option selected>Select Partner</option>
                                     <option value="partner1">Partner 1</option>
                                     <option value="partner2">Partner 2</option>
-                                </select>
-
-                                <select class="form-select form-control me-2" aria-label="Select Status">
-                                    <option selected>Select Status</option>
-                                    <option value="success">Success</option>
-                                    <option value="failed">Failed</option>
-                                    <option value="error">Error</option>
+                                    <option value="partner3">Partner 3</option>
+                                    <option value="partner4">Partner 4</option>
                                 </select>
 
                                 <select class="form-select form-control me-2" aria-label="Currency">
@@ -183,8 +172,8 @@
                                     <option value="inr">INR</option>
                                 </select>
 
-                                <select class="form-select form-control me-2" aria-label="Transaction Type">
-                                    <option selected>Transaction Type</option>
+                                <select class="form-select form-control me-2" aria-label="Trx Type">
+                                    <option selected>Trx Type</option>
                                     <option value="card">Card</option>
                                     <option value="crypto">Crypto</option>
                                 </select>
@@ -363,9 +352,6 @@
 
         cb(start, end); // Trigger initial display
     });
-
-
-
 
     const dataTableSearch = new simpleDatatables.DataTable("#datatable-search", {
         searchable: true,
