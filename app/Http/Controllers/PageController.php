@@ -43,7 +43,6 @@ class PageController extends Controller
         return abort(404);
     }
 
-    } 
     public function transactions(string $page)
     {
         // Check if the view exists in the "pt.transactions" directory
